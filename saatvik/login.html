@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+</head>
+
+<body>
+<div id="logger" style="padding-top:15px;">
+			<div class="options">
+				<ul class="opt" id="lgr">
+					<li><a href="#myModal1" data-toggle="modal" data-target="#myModal1"><h4>Register</h4></a></li>
+					<li><a href="#myModal" data-toggle="modal" data-target="#myModal"><h4>Login </h4></a></li>
+				</ul>
+			</div>
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">LOGIN</h4>
+						</div>
+						<div class="modal-body">
+							<form class="form-horizontal" role="form" method="post" action="index.php">
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="email">Email:</label>
+									<div class="col-sm-4"> 
+										<input type="email" class="form-control" id="email" placeholder="Enter email" required />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-4">Password:</label>
+									<div class="col-sm-4"> 
+										<input type="password" class="form-control" id="pass" placeholder="Enter password" required />
+									</div>
+								</div>
+								<div class="form-group"> 
+									<div class="col-sm-offset-4 col-sm-4">
+										<button type="submit" class="btn btn-info">Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="myModal1" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">REGISTER</h4>
+						</div>
+						<div class="modal-body">
+							<form class="form-horizontal" role="form" method="post" action="index.php">
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="usr">Full Name:</label>
+									<div class="col-sm-8"> 
+										<input type="text" class="form-control" id="usr" placeholder="Enter your full name" required />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="email">Email:</label>
+									<div class="col-sm-8"> 
+										<input type="email" class="form-control" id="email" placeholder="Enter email" required />
+									</div>
+								</div>				
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="comment">Events:</label>
+									<div class="col-sm-8">
+									<div class="checkbox">
+											<label><input type="checkbox" name="r1">Paper presentation &nbsp&nbsp </label>
+											<label><input type="checkbox" name="r2">Poster presentation &nbsp&nbsp </label>
+											<label><input type="checkbox" name="r3">Project presentation &nbsp&nbsp </label>
+											<label><input type="checkbox" name="r4">Coding &nbsp </label>
+											<label><input type="checkbox" name="r5">LAN Gaming &nbsp&nbsp </label>
+											<label><input type="checkbox" name="r6">Technical Quiz &nbsp&nbsp </label>
+											<label><input type="checkbox" name="r7">Photo trix &nbsp&nbsp </label>
+											<label><input type="checkbox" name="r8">Mock interview &nbsp&nbsp </label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="pass">Password:</label>
+									<div class="col-sm-8"> 
+										<input type="password" class="form-control" id="password" required />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-sm-4" for="pass">Confirm Password:</label>
+									<div class="col-sm-8"> 
+										<input type="password" class="form-control" id="password" required />
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4">Accommodation needed:</label>
+									<div class="col-md-8"> 
+										<div class="radio">
+											<label><input type="radio" name="useradio">Yes &nbsp &nbsp </label>
+											<label><input type="radio" name="useradio">No &nbsp &nbsp </label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="control-label col-md-4">Any other requirements:</label>
+									<div class="col-md-8">
+										<textarea class="form-control" id="reqd" rows="5" ></textarea>
+									</div>
+								</div>
+								<div class="form-group"> 
+									<div class="col-sm-offset-4 col-sm-8">
+										<button type="submit" class="btn btn-info">Submit</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
