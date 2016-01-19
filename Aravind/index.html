@@ -14,7 +14,7 @@
 	<section id="events">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-6 text-center left-incoming">
+				<div class="col-sm-6 text-center left-incoming 1">
 					<h3>Paper Presentation</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -23,7 +23,7 @@
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
-				<div class="col-sm-6 text-center right-incoming">
+				<div class="col-sm-6 text-center right-incoming 1">
 					<h3>Poster Presentation</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -34,7 +34,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-6 text-center left-incoming">
+				<div class="col-sm-6 text-center left-incoming 2">
 					<h3>Project Presentation</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -43,7 +43,7 @@
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
-				<div class="col-sm-6 text-center right-incoming">
+				<div class="col-sm-6 text-center right-incoming 2">
 					<h3>Coding</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-6 text-center left-incoming">
+				<div class="col-sm-6 text-center left-incoming 3">
 					<h3>LAN Gaming</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -63,7 +63,7 @@
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
-				<div class="col-sm-6 text-center right-incoming">
+				<div class="col-sm-6 text-center right-incoming 3">
 					<h3>Technical Quiz</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -74,7 +74,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-6 text-center left-incoming">
+				<div class="col-sm-6 text-center left-incoming 4">
 					<h3>Culturals</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -83,7 +83,7 @@
 					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
-				<div class="col-sm-6 text-center right-incoming">
+				<div class="col-sm-6 text-center right-incoming 4">
 					<h3>Mock Interview</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -105,7 +105,12 @@
 	<script>
 		$(function(){
 			$('div.left-incoming').addClass('animated bounceInLeft');
+			$('div.up-incoming').addClass('animated bounceInDown');
+			$('div.right-incoming').addClass('animated bounceInRight');
+			
 			$('div.left-incoming').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
+			$('div.right-incoming').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
+			$('div.up-incoming').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', doSomething);
 		});
 	</script>
 </body>
