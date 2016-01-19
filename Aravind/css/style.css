@@ -1,15 +1,18 @@
-div.left-incoming {
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0s;
-	-webkit-animation-iteration-count: 1;
+div.left-incoming-1 {
+	animation-delay: 0.5s;
 }
-div.right-incoming {
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 0s;
-	-webkit-animation-iteration-count: 1;	
+div.left-incoming-2 {
+	animation-delay: 1s;
+}	
+div.left-incoming-3 {
+	animation-delay: 1.5s;
+}	
+div.right-incoming-1 {
+	animation-delay: 0.5s;	
 }
-div.up-incoming {
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: 1s;
-	-webkit-animation-iteration-count: 1;
+div.right-incoming-2 {
+	animation-delay: 1s;		
+}
+div.right-incoming-3 {
+	animation-delay: 1.5s;
 }
