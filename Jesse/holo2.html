@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example of Bootstrap 3 Tabs</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--
+	<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">
+	<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+-->
+
+
+	<style type="text/css">
+
+		body{
+
+			background : -webkit-linear-gradient(top, #dbddc5, #a09989);
+			background :    -moz-linear-gradient(top, #dbddc5, #a09989);
+			background :      -o-linear-gradient(top, #dbddc5, #a09989);
+			background :         linear-gradient(to bottom, #dbddc5, #a09989);
+			background-attachment : fixed;	
+		}
+
+
+		li a {
+			font-family : 'Verdana';
+			font-size : 25px;
+			font-weight : bold;
+
+			border-radius : 30%;
+			box-shadow : 0px 5px 5px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.5) inset;
+			text-shadow : 0 -1px 1px #454432, 0 1px 1px #d6d5c1;
+			background : -webkit-linear-gradient(top, #e1e0cb, #a7a898);
+			background :    -moz-linear-gradient(top, #e1e0cb, #a7a898);
+			background :      -o-linear-gradient(top, #e1e0cb, #a7a898);
+			background :         linear-gradient(to bottom, #e1e0cb, #a7a898);
+		}
+
+		li a:before {
+			content : attr(title);
+		}
+
+		li a:after{
+			color : #788f7f;
+			content : attr(title);
+			-webkit-mask-image : -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+			   -moz-mask-image : -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+			     -o-mask-image : -o-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+			        mask-image : linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+		}
+
+		
+		li a:hover{
+			box-shadow : 0px 0px 5px rgba(0, 0, 0, 0.5), 0px 0px 0px rgba(255, 255, 255, 0.5) inset;
+			text-shadow : 0 -1px 1px #454432, 0 1px 1px #454432;
+		}
+		
+		li a:hover:before{
+			color : #0aeef7;
+		}
+
+		li a:hover:after{
+			color : #00b1ad;
+		}
+
+
+	</style>
+
+	<script>
+		$('.stat-wrap a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+	</script>
+</head>
+
+<body>
+
+	<div class="stat-wrap">
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#abt-quest-tab" data-toggle="tab" title="About Quest">About Quest</a></li>
+			<li><a href="#abt-jntu-tab" data-toggle="tab" title="About JNTU">About JNTU</a></li>
+			<li><a href="#abt-hod-tab" data-toggle="tab">About HOD</a></li>
+			<li><a href="#teaser-tab" data-toggle="tab">Teaser</a></li>
+			<li><a href="#trailer-tab" data-toggle="tab">Trailer</a></li>
+		</ul>
+	</div>
+
+	<div class="tab-content">
+		<div class="tab-pane active" id="abt-quest-tab">
+			HI
+		</div>
+
+		<div class="tab-pane" id="abt-jntu-tab">
+			HELLO
+		</div>
+
+		<div class="tab-pane" id="abt-hod-tab">
+			SUP'
+		</div>
+
+		<div class="tab-pane" id="teaser-tab">
+			HAVE A GOOD DAY!
+		</div>
+
+
+		<div class="tab-pane" id="trailer-tab">
+			CHEERS!
+		</div>
+	</div>
+</body>
+</html>                                		

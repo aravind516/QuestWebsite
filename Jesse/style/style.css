@@ -1,0 +1,110 @@
+@import "compass/css3";
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: gray;
+	color: white;
+	height: 2000px;
+	width: 2000px;
+}
+
+.abtjntuceh, .trailer, .abtquest, .teaser, .abthod {
+	border: 1px solid white;
+	display: inline-block;
+	padding: 20px;
+	height: 400px;
+	width: 800px;
+}
+
+ul li {
+	list-style: none;
+}
+
+li a {
+	text-decoration: none;
+	color: white;
+}
+/*
+#item1 {
+	top: 90%;
+	left: 30%;
+	position: fixed;
+} 
+
+#item2 {
+	top: 80%;
+	left: 35%;
+	position: fixed;
+} 
+
+#item3 {
+	top: 70%;
+	left: 50%;
+	position: fixed;
+} 
+
+#item4 {
+	top: 80%;
+	left: 65%;
+	position: fixed;
+} 
+
+#item5 {
+	top: 90%;
+	left: 70%;
+	position: fixed;
+}
+
+.abtjntuceh {
+	top: 1500px;
+	left: 200px;
+	position: absolute;
+	color: blue;
+}
+
+.trailer {
+	top: 900px;
+	left: 1200px;
+	position: absolute;
+	color: pink;
+}
+
+.abtquest {
+	top: 300px;
+	left: 2200px;
+	position: absolute;
+	color: cyan;
+}
+
+.teaser {
+	top: 900px;
+	left: 3200px;
+	position: absolute;
+	color: pink;
+}
+
+.abthod {
+	top: 1500px;
+	left: 4200px;
+	position: absolute;
+	color: blue;
+}
+*/
+div {
+	left: 200px;
+	top: 40px;
+	position: relative;
+}
+
+.abthod, .abtjntuceh {
+	color: blue;
+}
+
+.trailer, .teaser {
+	color: pink;
+}
+
+.abtquest {
+	color: cyan;
+}
