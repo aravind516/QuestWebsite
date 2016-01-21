@@ -12,26 +12,65 @@
   <script>   
 
   $(function(){
+    
 	   var items=$(".items").children();
 	   var nItems = items.length;
 	   var curItem = 0;
 	  items.eq(curItem).show();
 	   
-	  $('.menu-steer li').click( function(){
+	$('.menu-btn').click(function(){
+	   /* var options=$(".menu-steer").children();
+		
+		for(var i:options){
+		  i.addClass("slideOut");
+		}
+		*/
+		$('.menu-steer li').each(function(){
+		$('.menu-steer li').toggleClass("slideOut");
+		});
+	
+	
+	}); 
+   	
+	   
+	$('.menu-steer li').click( function(){
+	      
+		  var addingClass,removingClass;
 		  var prevItem =curItem;
-		curItem = $(this).attr('id');
-	if(prevItem!=curItem){
-		items.eq(prevItem).addClass("animated rotateOutUpLeft");
+		  curItem = $(this).attr('id');
+  
+     if(curItem==1||curItem==2){
+		 //in left, out right
+		   addingClass = "animated rotateInDownLeft";
+		   removingClass = "animated rotateOutUpRight"
+		}
+
+	if(curItem==0){
+		 //in top,out..
+		   addingClass = "animated slideInDown";
+		   removingClass = "animated fadeOut"
+		 
+		}	
+
+	if(curItem==3||curItem==4){
+	 //in right,out left
+	    addingClass = "animated rotateInDownRight";
+	    removingClass = "animated rotateOutUpLeft"
+	}
+		
+		
+	  if(prevItem!=curItem){
+		items.eq(prevItem).addClass(removingClass);
 		items.eq(prevItem).delay(1000).hide("fast");
 		
 		items.eq(curItem).show();
-		items.eq(curItem).addClass("animated rotateInDownRight");
+		items.eq(curItem).addClass(addingClass);
 		 
 		setTimeout(function(){
-		 items.eq(prevItem).removeClass("animated rotateOutUpLeft");
-         items.eq(curItem).removeClass("animated rotateInDownRight");
+		 items.eq(prevItem).removeClass(removingClass);
+         items.eq(curItem).removeClass(addingClass);
 		}, 1000);
-	}	  	
+	 }	  	
 	  });
 	   
 	});
@@ -70,6 +109,7 @@
   text-align:center;
   margin:0 auto;
   left:30%;
+  margin-top:5%;
   padding:10px 10px 10px 10px;
   background-color:white;
   background-color:white;
@@ -80,8 +120,10 @@
   
  .vid-content{
   position:absolute;
+  margin:0 auto;
   width:500px;
   left:30%;
+  margin-top:5%;
   text-align:center;
   display:none;
   }
@@ -107,31 +149,35 @@
 	  color:white;
 	}
   
-   li:nth-child(1) {
+   .menu-steer li{
+     transition:transform 0.4s ease-in;
+   }
+  
+   li.slideOut:nth-child(1) {
     -webkit-transform: translateX(-10em);
      transform: translateX(-10em);
    }
    
    
-   li:nth-child(2) {
+   li.slideOut:nth-child(2) {
      -webkit-transform: translateY(-7.071067811865475em) translateX(-7.071067811865475em);
      transform: translateY(-7.071067811865475em) translateX(-7.071067811865475em);
    }
    
    
-   li:nth-child(3) {
+   li.slideOut:nth-child(3) {
      -webkit-transform: translateY(-10em);
       transform: translateY(-10em);
    }
    
    
-   li:nth-child(4) {
+   li.slideOut:nth-child(4) {
       -webkit-transform: translateY(-7.071067811865475em) translateX(7.071067811865475em);
      transform: translateY(-7.071067811865475em) translateX(7.071067811865475em);
    }
 
  
-  li:nth-child(5) {
+  li.slideOut:nth-child(5) {
     -webkit-transform: translateX(10em);
      transform: translateX(10em);
    }
@@ -204,7 +250,10 @@
 	 <li id="0" class="questB "> <a href="#0">Quest </a></li>
 	 <li id="3" class="teaserB "> <a href="#3">Teaser </a></li>
 	 <li id="4" class="trailerB "><a href="#4"> Trailer </a></li>
-    </ul>
+   </ul>
+	
+	<button class="menu-btn circle">click here </button>
+	
   </nav>
  </div>
 </div>
