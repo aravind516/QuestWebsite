@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+	
+		@font-face {
+		    font-family:"SquaredDisplay";
+		    src: url("Squared Display.ttf");
+		    font-weight: bold;
+		}
+
+		body{
+			font-family: SquaredDisplay;
+			font-size: 40px;
+			color: blue;
+			background-color: black;
+		}
+
+		ul li {
+			list-style: none;
+		}
+
+		li a {
+			text-decoration: none;
+			color: #0aeef7;
+		}
+
+		li a:before {
+			content: attr(title);
+/*			filter: glow(color=#00ff00, strength=3);
+			text-shadow: #ff0000 0 0 100px;
+*/		}
+/*
+		li a:hover {
+			.text-glow:hover {
+			text-shadow: 41px 20px 100px #ffd200;
+			-webkit-transition: 1s linear 0s;
+			-moz-transition: 1s linear 0s;
+			-o-transition: 1s linear 0s;
+			transition: 1s linear 0s;
+			outline: 0 none;
+		}
+		*/
+
+	</style>
+
+</head>
+<body>
+	
+	<div>
+		<nav>
+			<ul>
+				<li><a href="#"class="circle-button item1" title="About Quest"><span></span></a></li>
+				<li><a href="#"class="circle-button item2" title="About JNTU"><span></span></a></li>
+				<li><a href="#"class="circle-button item3" title="About HOD"><span></span></a></li>
+				<li><a href="#"class="circle-button item4" title="Teaser"><span></span></a></li>
+				<li><a href="#"class="circle-button item5" title="Trailer"><span></span></a></li>
+			</ul>
+		</nav>
+	</div>
+
+
+</body>
+</html>

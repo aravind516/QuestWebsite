@@ -39,15 +39,23 @@
 			background :    -moz-linear-gradient(top, #e1e0cb, #a7a898);
 			background :      -o-linear-gradient(top, #e1e0cb, #a7a898);
 			background :         linear-gradient(to bottom, #e1e0cb, #a7a898);
+			position: relative;
 		}
 
 		li a:before {
 			content : attr(title);
+			display : block;
+			position : absolute;
+			color : #a8c3b2;
+
+
 		}
 
 		li a:after{
 			color : #788f7f;
+			text-align : center;
 			content : attr(title);
+
 			-webkit-mask-image : -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 			   -moz-mask-image : -moz-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 			     -o-mask-image : -o-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
@@ -69,6 +77,7 @@
 		}
 
 
+		
 	</style>
 
 	<script>
@@ -83,11 +92,11 @@
 
 	<div class="stat-wrap">
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="#abt-quest-tab" data-toggle="tab" title="About Quest">About Quest</a></li>
-			<li><a href="#abt-jntu-tab" data-toggle="tab" title="About JNTU">About JNTU</a></li>
-			<li><a href="#abt-hod-tab" data-toggle="tab">About HOD</a></li>
-			<li><a href="#teaser-tab" data-toggle="tab">Teaser</a></li>
-			<li><a href="#trailer-tab" data-toggle="tab">Trailer</a></li>
+			<li class="active"><a href="#abt-quest-tab" data-toggle="tab" title="About Quest"><span></span></a></li>
+			<li><a href="#abt-jntu-tab" data-toggle="tab" title="About JNTU"><span></span></a></li>
+			<li><a href="#abt-hod-tab" data-toggle="tab" title="About HOD"><span></span></a></li>
+			<li><a href="#teaser-tab" data-toggle="tab" title="Teaser"><span></span></a></li>
+			<li><a href="#trailer-tab" data-toggle="tab" title="Trailer"><span></span></a></li>
 		</ul>
 	</div>
 
