@@ -32,34 +32,21 @@
 	}
 	 
 	 .container{
-	      display: -webkit-box;
-		  display: -webkit-flex;
-		  display: -ms-flexbox;
-		  display: flex;
-		  -webkit-box-align: center;
-		  -webkit-align-items: center;
-			  -ms-flex-align: center;
-				  align-items: center;
-		  -webkit-box-pack: center;
-		  -webkit-justify-content: center;
-			  -ms-flex-pack: center;
-				  justify-content: center;
-		  min-height: 100vh;
-		  padding: 30px;
-		  position: relative;
-		  z-index: 1;
+        
 	 }
 	 
 	 .form{
 	      border-top: 1px solid rgba(0, 255, 255, 0.25);
 		  background-color: rgba(0, 255, 255, 0.08);
 		  color: rgba(255, 255, 255, 0.8);
-		  -webkit-box-flex: 1;
-		  -webkit-flex: 1;
-			  -ms-flex: 1;
-				  flex: 1;
+		 // -webkit-box-flex: 1;
+		  //webkit-flex: 1;
+			//  -ms-flex: 1;
+			//	  flex: 1;
 		 // padding: 20px;
 		  position: relative;
+		  width:500px;
+		  margin-left:30%;
 	   }
 	   
 	 .form:before,.form:after{
@@ -89,8 +76,7 @@
 	 .content{
 	     padding:20px;
 	 }
-     
-	 
+    
 	 @media (min-width: 768px) {
 		  .form {
 			-webkit-box-flex: 0;
@@ -154,7 +140,21 @@
 	.active {
 	  opacity: 1;
 	}
-		
+	
+	.options{
+	  color: rgba(255, 255, 255, 0.8);
+	  list-style-type:none;
+	  display:inline-block;
+	}
+	 .options li{
+	  cursor:hand;
+	  margin:5px;
+	 }
+	 
+	.options li:hover{
+	    color: rgba(255, 255, 255);
+		text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+	}
 	</style>
 	
 	<script>
@@ -185,8 +185,12 @@
   </head>
   
   <body>
+   <ul class="options">
+     <li>register</li>
+	 <li>login</li>
+   </ul>
   <div class="container">
-    <form class="form">
+    <form class="form login">
 		<h1 class="text-center">Login</h1>
 		<div class="content">
 	      <div class="field">
@@ -202,8 +206,9 @@
 		  </div>
 		</div> 
 		  <div class="input-clip"></div>	
-     </form>		
-   </div>
+     </form>	
+  </div>
+  
   </body>
 
 </html>

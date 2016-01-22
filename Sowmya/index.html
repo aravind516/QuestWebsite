@@ -1,14 +1,62 @@
 <html>
   <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <link rel="stylesheet" href="../FrameWorks/animate.css">
 	  <style>
-	  
 			* { 
 				margin: 0; 
 				padding: 0;
 			}
 			
+			 .colorgrad{
+				 background-image:linear-gradient(to bottom right,#002f4b,#dc4225);
+				 background-image: -webkit-gradient( linear, left top, right top, color-stop(0,#00D14C),color-stop(1,#0094B2) );
+				 color:transparent;
+				-webkit-background-clip: text;
+				 background-clip: text; 
+			 }
+			 
 			body{
 			  background-color:black;
+              background-image:  linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+	          background-size:50px 50px;
+			  margin:0 auto;
+			  margin:0px 0px 0px 0px;
+			  padding:0px 0px 0px 0px; 
+			  color:rgba(255, 255, 255,0.8);
+			}
+			ul{
+			  list-style-type:none;
+			}
+			a{
+			 text-decoration:none;
+			  color:rgba(255, 255, 255,0.8);
+			}
+			
+			<!--@media only screen and (min-width: 768px) { 
+			 .menu { 
+			 margin-left:2%; 
+			 } 
+			} 
+			@media only screen and (min-width: 768px) { 
+			 .home-wrapper { 
+			  margin-left:15%; 
+			 } 
+			} 
+			-->
+			.container{
+			 position:relative;
+			}
+			.menu{
+			 float:left;
+			 margin-top:3%;
+			}
+			
+			.menu li{
+			  margin-left:5px;
+			  margin-top:20px;
+			  text-align:center;
+			  //border:1px solid white;
 			}
 			
 			.entity{
@@ -18,8 +66,8 @@
 			}
 			
 			.semi_arc {
-			  width: 100px;
-			  height: 100px;
+			  width:150px;
+			  height:150px;
 			  border: 7px solid rgb(0, 255, 255);
 			  background:transparent;
 			  border-radius:50%;
@@ -35,11 +83,6 @@
 			  transition: 0.3s;
 			}
 			
-			.e4 {
-			  width: 150px;
-			  height: 150px;
-			}
-			
 			.semi_arc_2 {
 			  content: "";
 			  position: absolute;
@@ -50,6 +93,9 @@
 			  border: 3px solid rgb(0, 255, 255);
 			  border-radius:50%;
 			  box-sizing:border-box;
+			  border-color: rgba(0, 255, 255, 0.8);
+			  border-left: 5px solid transparent;
+			  border-right: 5px solid transparent;
 			  animation: rotate 4s linear infinite;
 			  text-align: center;
 			  line-height: 129px;
@@ -70,12 +116,6 @@
 			  border-right: 5px solid transparent;
 			}
 			
-			.e4_1 {
-			  border-color: rgba(0, 255, 255, 0.8);
-			  border-left: 5px solid transparent;
-			  border-right: 5px solid transparent;
-			}
-			
 			@keyframes rotate {
 			  0% { transform: rotateZ(0deg) }
 			100% { transform: rotateZ(360deg) }
@@ -88,37 +128,197 @@
 				
 			.text{
 			  position:absolute;
-			  left:20%;
+			  left:30%;
 			  top:30%;
 			  color:rgb(0, 255, 255);
-			  font-size:30px;
+			  font-size:170%;
 			  text-align:center;
 			  text-shadow:0px 0px 5px rgba(0, 255, 255, 0.8);
 			  transition:all 0.3s ease-in-out;
 			}
 			
 			.entity:hover .text{
-			  color:rgba(255, 255, 255, 0.8);
+			  color:rgb(255, 255, 255);
 			  text-shadow:0px 0px 10px rgba(255, 255, 255, 0.8);
 			}
-			.menu{
+			
+			.home-wrapper{
 			  position:relative;
+			  float:left;
+			  margin-left:10%;
+			  margin-top:10%;
+			  width:40%;
+              text-align:center;	
+              padding:10px 10px 10px 10px;		  
+			}
+			.logo{
+			  font-size:100px;
+			}
+			.quest{display:none;}
+			.caption{display:none;}
+    		.intro{
+			  font-size:40px;
+			  color:rgba(255, 255, 255, 0.8);
+			  position:relative;
+			  display:none;
 			}
 			
-			.menu li{
-			  width:200px;
-			  margin-left:5px;
-			  margin-top:5px;
-			  text-align:center;
+		  .leftBorder1{
+		     //opacity:0;
+			 position:absolute;
+			 height:110%;
+			 top:10%;
+			 border-left:2px solid rgba(0, 255, 255, 0.5);
+			 animation: leftDraw 1s 4s linear;
 			}
+			
+		  .leftBorder2{
+		     //opacity:0;
+			 position:absolute;
+			 height:100%;
+			 top:5%;
+			 left:-1%;
+			 border-left:5px solid rgba(0, 255, 255,1);
+			 animation: leftDraw 1s 4s linear;
+			}	
+		  .bottomBorder1{
+		     //opacity:0;
+			 position:absolute;
+			 width:100%;
+			 left:-5%;
+			 bottom:-10%;
+			 border-bottom:4px solid rgba(0, 255, 255, 0.8);
+			 animation: bottomDraw 1s 4s linear;
+			}	
+		  .bottomBorder2{
+		     //opacity:0;
+			 position:absolute;
+			 width:90%;
+			 left:-2%;
+			 bottom:-15%;
+			 border-bottom:3px solid rgba(0, 255, 255, 0.6);
+			 animation: bottomDraw 1s 4s linear;
+			}			
+		 @keyframes bottomDraw{
+		   from{
+		     opacity:0;
+			 width:20%;
+		    }
+		   50%{
+		    opacity:1;
+			 width:50%;
+		   }
+		   100%{
+		    opacity:1;
+		   }
+		 }	
+		@keyframes leftDraw{
+		   from{
+		     opacity:0;
+			 height:20%;
+		    }
+		   50%{
+		    opacity:1;
+			 height:50%;
+		   }
+		  }
+		canvas{
+		  //float:left;
+		  position:absolute;
+		  left:50%; 
+		  display:none;
+		}
+
+       .account{
+		  position:relative;
+		  font-size:40px;
+	      border-top: 25px solid rgba(0, 255, 255,1);
+		  border-bottom:1px solid rgba(0, 255, 255,0.3);
+		  background-color: rgba(0, 255, 255, 0.1);
+		  padding:30px 30px 30px 30px;
+		  margin:60px 30px 5px 5px;
+		  display:none;
+	   }
+      .account:after,.account:before{
+	     position:absolute;
+	     content:"";
+	     width:6px;
+         height:6px;
+         border:1px solid rgba(0, 255, 255, 0.5);	 
+		 background-color: rgba(0, 255, 255, 0.5);
+		 bottom:-3px;
+	   }	
+      .account:before{
+		 left:-3px;
+	  }
+	  .account:after{
+	     right:-3px;
+	  }
+	  
+	  .account li:hover a{
+	    color:rgba(255, 255, 255,0.8);
+		text-shadow:0px 0px 10px rgba(255, 255, 255,0.8);
+	  }
+	  
+	  .socialIcons{
+	   position:relative;
+	   display:inline-block;
+	   float:right;
+	   margin-right:20%;
+	   display:none;
+	  }
+	  
+	  .socialIcons li{
+	    margin:30px 0px 30px 0px;
+	   }
+	   .socialIcons img{
+	     background-color:rgba(0, 255, 255, 0.5);
+	   }
+	   
+	   .socialIcons li:hover img{
+	     background-color:rgba(0, 255, 255,1);
+		 box-shadow:0px 0px 5px rgba(0, 255, 255,1);
+	   }
+	   
+	   .socialIcons li:hover a{
+		 text-shadow:0px 0px 5px rgba(255, 255, 255,1);
+	   }
+	   
+	  .floatRight{
+	    float:right;
+	   }
 	  </style>
+	  
+	<script>
+	  $(function(){
+	    var borChild = document.getElementsByClassName('borderClass');
+	    
+		for(var i=0;i<borChild.length;i++){
+		 $(borChild[i]).css("opacity","0");
+		}
+	    
+		$('.menu li').addClass("animated zoomIn");
+		$('.quest').delay(1500).queue(function(){ $(this).show();$(this).addClass("animated slideInDown"); $(this).dequeue(); });
+		$('.caption').delay(3000).queue(function(){ $(this).show();$(this).addClass("animated fadeIn"); $(this).dequeue(); });
+		$('.intro').delay(4000).queue(function(){ $(this).show();$(this).addClass("animated slideInUp"); $(this).dequeue(); });
+		$('.account').delay(5000).slideDown("slow","swing");
+		$('canvas').delay(6000).queue(function(){ $(this).show();$(this).addClass("animated bounce"); $(this).dequeue(); });
+		$('.socialIcons li').delay(7000).queue(function(){ $('.socialIcons').show();$(this).addClass("animated flash"); $(this).dequeue(); });
+		
+		for(var i=0;i<borChild.length;i++){
+		 $(borChild[i]).delay(4500).queue(function(){$(this).css("opacity","1");});
+		}
+	  });
+	</script>
+			    
   </head>
 <body>
+   <div class="container">
 		 <ul class="menu">
 			  <li>
 			   <div class="entity">
-				<div class="semi_arc e4">
-					<div class="semi_arc_2 e4_1">
+				<div class="semi_arc">
+					<div class="semi_arc_2">
 					</div>
 				</div>
 				  <div class="text"><p>Our</p><p>Events</p></div>
@@ -127,8 +327,8 @@
 			  
 			  <li>	  
 			   <div class="entity">
-				<div class="semi_arc e4">
-					<div class="semi_arc_2 e4_1">
+				<div class="semi_arc">
+					<div class="semi_arc_2">
 					</div>
 				</div>
 				  <div class="text"><p>Work</p><p>-Shops </p></div>
@@ -137,8 +337,8 @@
 			  
 			  <li>	  
 			   <div class="entity">
-				<div class="semi_arc e4">
-					<div class="semi_arc_2 e4_1">
+				<div class="semi_arc">
+					<div class="semi_arc_2">
 					</div>
 				</div>
 				  <div class="text"><p>About</p> <p>Us</p></div>
@@ -146,6 +346,40 @@
 			 </li>
 		</ul>   
 		
+		<div class="home-wrapper">
+		    <div class="logo">
+			  <div class="quest">
+			    <span class="colorgrad">Quest<span>
+			  </div>
+			  <div class="caption">
+			    <span class="colorgrad">i'm caption </span>
+			  </div>
+			</div>
+			<div class="intro">
+			  -from march 14th to 15th
+			</div>		
+		 <div class="borderClass leftBorder1"> </div>
+		 <div class="borderClass leftBorder2"> </div>
+		 <div class="borderClass bottomBorder1"> </div>
+		 <div class="borderClass bottomBorder2"> </div>
+	 </div>
+	 
+  <canvas id="canvas" height="500" width="400"></canvas>
+  <script src="canvas.js"></script>
+ <div class="floatRight"> 
+  <ul class="account">
+    <li> <a href=""> register </a> </li>
+	<li> <a href=""> login </a> </li>
+  </ul>
+  
+  <ul class="socialIcons">
+    <li> <a href=""> <p><img src="png\facebook.png"> like us</p> </a> </li>
+	<li> <a href=""> <p><img src="png\google.png"> contact us</p> </a> </li>
+	<li> <a href=""> <p><img src="png\youtube.png"> watch videos</p> </a> </li>
+	<li> <a href=""> <p><img src="png\twitter.png"> follow us </p></a> </li>
+  </ul>
+ </div> 
+ </div>	
 		
 </body>
 </html>
