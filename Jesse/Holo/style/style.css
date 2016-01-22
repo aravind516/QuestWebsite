@@ -124,3 +124,9 @@ height: 100%;
 background-size:50px 50px;
 
 }
+
+.default {
+	display: block;
+	text-align: center;
+	font-size: 100px;
+}
