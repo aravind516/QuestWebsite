@@ -4,6 +4,7 @@
    <link rel="stylesheet" href="../FrameWorks/animate.css">
    
    <style>
+   
      body{
 	   margin:0px 0px 0px 0px;
 	   padding:0px 0px 0px 0px;
@@ -32,12 +33,25 @@
 	   position:relative;
 	   margin:0;
 	   margin-top:1%;
-	   left:20%;
-	   font-size:50px;
+	   left:12%;
+	   font-size:70px;
 	   display:inline-block;
        list-style-type:none;
 	   font-family:squared;
-	   text-shadow: 0px 0px 10px #fff,0px 0px 20px #fff,0px 0px 30px #fff,0px 0px 35px #228DFF,0px 0px 40px #80ffcc,0px 0px 60px #228DFF;
+	   text-shadow: 0px 0px 10px #fff,0px 0px 15px #228DFF;
+	   //animation:glowMore 4s ease-in-out infinite;
+	 }
+	 @keyframes glowMore{
+	  from{ text-shadow: 0px 0px 10px #228DFF ,0px 0px 20px #fff,0px 0px 25px #fff,0px 0px 30px #228DFF,0px 0px 70px #80ffcc,0px 0px 100px #228DFF;  }
+	  to{ text-shadow: 0px 0px 10px #fff,0px 0px 20px #fff,0px 0px 30px #fff,0px 0px 35px #228DFF,0px 0px 40px #80ffcc,0px 0px 60px #228DFF;  }
+	 }
+	 
+	 .colorgrad{
+	     background-image:linear-gradient(to bottom right,#002f4b,#dc4225);
+		  background-image: -webkit-gradient( linear, left top, right top, color-stop(0,#00D14C),color-stop(1,#0094B2) );
+		  color:transparent;
+		  -webkit-background-clip: text;
+		  background-clip: text; 
 	 }
 	 
 	.menu li{
@@ -50,7 +64,8 @@
 	.menu li a{
 	  padding:5px 5px 5px 5px;
 	  text-decoration:none;
-	  color:#80ffcc;
+	 //color:#80ffcc;
+	 color:white;
 	}
 	
 	.menu li hr{
@@ -59,7 +74,6 @@
       margin-left:15%;	 
 	  width:60%;
 	  opacity:0;
-	 
 	}
 	.menu li:hover .hr1{
 	   opacity:1;
@@ -106,15 +120,21 @@
 	
 	.content-wrap{
 	  position:absolute;
-	  left:22%;
+	  left:20%;
 	  width:60%;
 	  border:1px solid #80ffcc;
-	  box-shadow: 0px 0px 10px #fff,0px 0px 30px #228DFF;
+	  box-shadow: 0px 0px 10px #fff,0px 0px 15px #228DFF;
 	  //background-image:linear-gradient(#434343, #282828);
 	  background-color:rgba(128, 255, 204,0.2);
 	  //display:none;
-	
+	  animation: borderGlow 3s linear  infinite alternate;
 	}
+	
+	@keyframes borderGlow{
+	  from{ box-shadow: 0px 0px 10px #fff,0px 0px 15px #228DFF; }
+	  to{ box-shadow: 0px 0px 10px #fff,0px 0px 20px #fff,0px 0px 30px #228DFF; }
+	}
+	
 	.borderClass{
 	   border:1px solid #80ffcc;
 	   box-shadow: 0px 0px 10px #fff,0px 0px 30px #228DFF;
@@ -132,22 +152,27 @@
 	}
    
    .content-wrap p{
-     //padding:10px 10px 10px 10px;
-	  padding-left:10px;
+     padding:10px 10px 10px 10px;
+	  //padding-left:10px;
 	  color:white;  
 	  display:none;
    }
-   
+ 
    </style>
    
   <script>
    $(function(){ 
+      
+      $('.menu li').hover( function(){
+        $(this).find('span').toggleClass("colorgrad");
+	  });
+   
        var items=$(".items").children();
 	   var nItems = items.length;
 	   var curId =0;
 	   var cur = items[curId];
-	   $('.menu #0 a').css('color','white');
-	  
+	   $('.menu #'+curId+' span').removeClass("colorgrad");
+	   
 	  $child = $(cur).children();
 	  $(cur).addClass("borderClass");
 	  $child.eq(0).show();
@@ -171,16 +196,19 @@
 	   cur = items[curId];
 	  if(prev!=cur){ 
 	     $prevChild.eq(0).hide();
-		 $prevChild.eq(1).hide();
-		 $('.menu #'+prevId+' a').css('color','#80ffcc');    
-		 
+		 $prevChild.eq(1).hide();  
+	     
+		 $('.menu #'+prevId+' span').addClass("colorgrad");
+		 //$('.menu #'+prevId+' span').css('color','transparent');
+		
 		 $child = $(cur).children();
 	     $child.eq(0).show();
 		 $child.eq(0).addClass("animated zoomIn");
 		 $child.eq(1).delay(500).slideDown("slow","swing");
-			  
-	     $('.menu #'+curId+' a').css('color','white');     
-	        
+			   
+	       $('.menu #'+curId+' span').removeClass("colorgrad");
+	       //$('.menu #'+curId+' span').css('color','white');
+		 	
 			setTimeout(function(){
 				 $child.eq(0).removeClass("animated zoomIn");
 			}, 1000);
@@ -196,11 +224,11 @@
  <body>
  
     <ul class="menu">
-	 <li id="2" class="hodB "> <hr class="hr1"> <a href="#2"> HOD </a> <hr class="hr2"> </li>
-	 <li id="1" class="AboutUsB "> <hr class="hr1"> <a href="#1">About </a> <hr class="hr2"> </li>
-	 <li id="0" class="questB "> <hr class="hr1"> <a href="#0">Quest </a> <hr class="hr2"> </li>
-	 <li id="3" class="teaserB "> <hr class="hr1"> <a href="#3">Teaser </a> <hr class="hr2"> </li>
-	 <li id="4" class="trailerB "> <hr class="hr1"> <a href="#4"> Trailer </a> <hr class="hr2"> </li>
+	 <li id="2" class="hodB">     <hr class="hr1"> <a href="#2"> <span class="colorgrad">  HOD   </a> <hr class="hr2"> </span> </li>
+	 <li id="1" class="AboutUsB"> <hr class="hr1"> <a href="#1"> <span class="colorgrad">  About </span></a> <hr class="hr2"> </li>
+	 <li id="0" class="questB">   <hr class="hr1"> <a href="#0"> <span class="colorgrad">  Quest </span></a> <hr class="hr2"> </li>
+	 <li id="3" class="teaserB">  <hr class="hr1"> <a href="#3"> <span class="colorgrad"> Teaser </span></a> <hr class="hr2"> </li>
+	 <li id="4" class="trailerB"> <hr class="hr1"> <a href="#4"> <span class="colorgrad"> Trailer</span></a> <hr class="hr2"> </li>
    </ul>
   
   <div class="wrapper">
@@ -261,5 +289,6 @@
 		 </div>
 	</div>	 
   </div> 
+
  </body>
 </html>
