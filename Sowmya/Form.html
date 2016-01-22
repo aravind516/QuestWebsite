@@ -58,13 +58,38 @@
 		  -webkit-flex: 1;
 			  -ms-flex: 1;
 				  flex: 1;
-		  padding: 20px;
+		 // padding: 20px;
 		  position: relative;
 	   }
+	   
+	 .form:before,.form:after{
+		 content:'';
+		 border:1px solid rgba(0, 255, 255, 0.25);
+		 background-color:rgba(0, 255, 255, 0.5);
+		 position:absolute;
+		 height:12px;
+		 width:12px;
+	 }  
+     .form:before{
+		 left:0px;
+		 bottom:-6px;
+	 }
+	 
+	 .form:after{
+		 right:0px;
+		 bottom:-6px;
+	 }
+	 .form h1,h2,h3{
+		  margin-top:0;
+		  margin-bottom:0;
+		  text-align:center;
+		  background-color: rgba(0, 255, 255, 0.25);
+	 }
+	 
+	 .content{
+	     padding:20px;
+	 }
      
-     .text-center{
-	   text-align:center;
-	 }	 
 	 
 	 @media (min-width: 768px) {
 		  .form {
@@ -93,7 +118,7 @@
 	 }
 	 
 	.separate{
-	  
+	  margin-top:30px;
 	}
 	
 	.button{
@@ -134,17 +159,6 @@
 	
 	<script>
 	 $(function(){
-	   /*$('.input').on('focus',function(){
-		   var offset = $(this).position();
-		   $('.input-clip').css('top', offset.top);
-		   $('.input-clip').addClass('active');
-	   });
-	   
-	    $('.input').on('blur', function() {
-			$('input-clip').removeClass('active');
-	    });
-	  */
-	  
 			  (function() {
 		  var $clip = $('.input-clip');
 		  var $inputs = $('input');
@@ -174,7 +188,7 @@
   <div class="container">
     <form class="form">
 		<h1 class="text-center">Login</h1>
-		
+		<div class="content">
 	      <div class="field">
 		     <input type="text" class="input" placeholder="Email">
 		  </div>
@@ -186,7 +200,7 @@
 		  <div class="field separate">
 			 <input type="submit" value="Log In" class="button">
 		  </div>
-		  
+		</div> 
 		  <div class="input-clip"></div>	
      </form>		
    </div>
