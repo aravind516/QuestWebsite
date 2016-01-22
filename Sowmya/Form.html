@@ -1,0 +1,195 @@
+<html>
+  <head>
+    <script src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+    <style>
+    @font-face{
+	  src:url("Fonts/Squared Display.ttf");
+	  font-family:squared;
+	}   
+	
+	@font-face{
+	  src:url("Fonts/CaviarDreams.ttf");
+	  font-family:bodyText;
+	} 
+	
+	body{
+	   margin:0px 0px 0px 0px;
+	   padding:0px 0px 0px 0px;
+	   background-color:black;
+	   font-family: 'Roboto', Helvetica, sans-serif, arial;
+	   font-size: 16px;
+	  -webkit-font-smoothing: antialiased;
+	   font-size:20px;
+       background-image:  linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+       height:100%;
+	   background-size:50px 50px;
+     }
+	 
+	 h1, h2, h3 {
+	  font-family: 'Roboto Condensed', Helvetica Neue, arial;
+	  font-weight: lighter;
+	  margin: 0;
+	}
+	 
+	 .container{
+	      display: -webkit-box;
+		  display: -webkit-flex;
+		  display: -ms-flexbox;
+		  display: flex;
+		  -webkit-box-align: center;
+		  -webkit-align-items: center;
+			  -ms-flex-align: center;
+				  align-items: center;
+		  -webkit-box-pack: center;
+		  -webkit-justify-content: center;
+			  -ms-flex-pack: center;
+				  justify-content: center;
+		  min-height: 100vh;
+		  padding: 30px;
+		  position: relative;
+		  z-index: 1;
+	 }
+	 
+	 .form{
+	      border-top: 1px solid rgba(0, 255, 255, 0.25);
+		  background-color: rgba(0, 255, 255, 0.08);
+		  color: rgba(255, 255, 255, 0.8);
+		  -webkit-box-flex: 1;
+		  -webkit-flex: 1;
+			  -ms-flex: 1;
+				  flex: 1;
+		  padding: 20px;
+		  position: relative;
+	   }
+     
+     .text-center{
+	   text-align:center;
+	 }	 
+	 
+	 @media (min-width: 768px) {
+		  .form {
+			-webkit-box-flex: 0;
+			-webkit-flex: 0 0 500px;
+				-ms-flex: 0 0 500px;
+					flex: 0 0 500px;
+		  }
+    }
+	
+	.field{
+	  margin-top: 12px;
+	  font-size: inherit;
+	 }
+	 
+	.input{
+	  background-color: transparent;
+	  border: 0;
+	  color: inherit;
+	  display: block;
+	  font-family: inherit;
+	  font-size: inherit;
+	  outline: 0;
+	  padding: 8px 0;
+	  width: 100%;
+	 }
+	 
+	.separate{
+	  
+	}
+	
+	.button{
+      background: transparent;
+      background: transparent;
+	  border: 1px solid rgba(255, 255, 255, 0.3);
+	  border-radius: 2px;
+	  color: rgba(255, 255, 255, 0.8);
+	  cursor: pointer;
+	  font: inherit;
+	  outline: 0;
+	  padding: 8px 20px;
+	  -webkit-transition: border-color 0.3s ease-in-out;
+	  transition: border-color 0.3s ease-in-out;
+	}
+	
+   .button:hover, .button:focus {
+	  border-color: rgba(255, 255, 255, 0.5);
+    }
+	
+	.input-clip {
+	  background: rgba(255, 255, 255, 0.4);
+	  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+	  left: 0;
+	  height: 35px;
+	  opacity: 0;
+	  position: absolute;
+	  width: 2px;
+	  -webkit-transition: opacity 0.3s ease-in-out, top 0.3s cubic-bezier(0.5, 0, 0.35, 1.6);
+	  transition: opacity 0.3s ease-in-out, top 0.3s cubic-bezier(0.5, 0, 0.35, 1.6);
+	}
+	
+	.active {
+	  opacity: 1;
+	}
+		
+	</style>
+	
+	<script>
+	 $(function(){
+	   /*$('.input').on('focus',function(){
+		   var offset = $(this).position();
+		   $('.input-clip').css('top', offset.top);
+		   $('.input-clip').addClass('active');
+	   });
+	   
+	    $('.input').on('blur', function() {
+			$('input-clip').removeClass('active');
+	    });
+	  */
+	  
+			  (function() {
+		  var $clip = $('.input-clip');
+		  var $inputs = $('input');
+		  
+		  $inputs.on('focus', function() {
+			var $this = $(this);
+			var offset = $this.position();
+			$clip.css('top', offset.top)
+			  .addClass('active');
+		  });
+		  
+		  $inputs.on('blur', function() {
+			$clip.removeClass('active');
+		  });
+		  
+		  $('form').on('submit', function() {
+			return false;
+		  }); 
+		})();
+	 });
+	 
+	
+	</script>
+  </head>
+  
+  <body>
+  <div class="container">
+    <form class="form">
+		<h1 class="text-center">Login</h1>
+		
+	      <div class="field">
+		     <input type="text" class="input" placeholder="Email">
+		  </div>
+		  
+		  <div class="field">
+			 <input type="password" class="input" placeholder="Password">
+		  </div>
+		  
+		  <div class="field separate">
+			 <input type="submit" value="Log In" class="button">
+		  </div>
+		  
+		  <div class="input-clip"></div>	
+     </form>		
+   </div>
+  </body>
+
+</html>
