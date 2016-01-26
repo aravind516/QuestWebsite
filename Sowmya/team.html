@@ -8,7 +8,10 @@
         margin:0px 0px 0px 0px;
 		padding:0 0 0 0;
 	  }
-	
+	 @font-face{
+		 src:url("Fonts/Squared Display.ttf");
+		 font-family:squared;
+	} 
 	body{
 		background-color:black;
      	font-size:40px;	
@@ -19,6 +22,7 @@
 	    background-size:50px 50px;
 	    margin:0 auto;
 		color:rgba(0,255,255,1);
+		font-family:squared;
 	}
 	
 	a{ text-decoration:none; }
@@ -110,7 +114,7 @@
    }   
   	
  .container .box{
-   border: 1px solid rgba(0, 255, 255,0.8);;
+   border: 4px solid rgba(0, 255, 255,0.8);;
    float:left;
    margin:5px;
    position:relative;
@@ -132,23 +136,30 @@
 	color: #fff;
 	z-index:10;
 	position:absolute;
-	 -webkit-transition: all 1s ease;
+	height:200px;
+	width:200px;
+	display:block;
+    bottom:-200px;
+	text-align:center;
+	-webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;.
     -o-transition: all 1s ease;
     -ms-transition: all 1s ease;
     transition: all 1s ease;
     left:0;
- }   
+ }  
  
-  .container .box .simple-caption{
-	  height:200px;
-	  width:200px;
-	  display:block;
-	  bottom:-200px;
-	  text-align:center;
+  .container .box .caption p{
+    font-size:20px;
+    margin-top:40%;
+ }
+
+  
+ .container .box:hover{
+   box-shadow:0px 0px 5px rgba(255,255,255,1),0px 0px 10px rgba(255,255,255,1);
  }
  
- .container .box:hover .simple-caption{
+ .container .box:hover .caption{
     -moz-transform: translateY(-100%);
     -o-transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
@@ -194,9 +205,8 @@
      <li> 
 		<div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
-			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <span class="caption"> 
+			  <p> My Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -204,9 +214,8 @@
 	  <li> 
 		 <div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
-			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <span class="caption"> 
+			  <p> My Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -214,9 +223,8 @@
 	  <li> 
 		<div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
-			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <span class="caption"> 
+			  <p> My Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -224,9 +232,8 @@
 	  <li> 
 		 <div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
-			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <span class="caption"> 
+			  <p> My Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -239,9 +246,8 @@
      <li> 
 		<div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
-			  <span class="caption simple-caption "> 
-			  <p> Name </p> 
-			  <p> 039402394</p>
+			  <span class="caption"> 
+			  <p> Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -249,9 +255,8 @@
 	  <li> 
 		 <div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
-			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <span class="caption"> 
+			  <p> My Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -259,9 +264,8 @@
 	  <li> 
 		<div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
-			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <span class="caption"> 
+			  <p> My Name <br>  039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -269,9 +273,8 @@
 	  <li> 
 		 <div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
-			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <span class="caption"> 
+			  <p> My Name <br>  039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -286,8 +289,7 @@
 		<div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
 			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <p> My Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -296,8 +298,7 @@
 		 <div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
 			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <p> My Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -306,8 +307,7 @@
 		<div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
 			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <p> My Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
@@ -316,8 +316,7 @@
 		 <div id="box1" class="box">
 			  <img id="image1" src="team-img.jpg">
 			  <span class="caption simple-caption "> 
-			  <p> My Name </p> 
-			  <p> 039402394</p>
+			  <p> My Name <br> 039402394</p>
 			  </span>
        </div>
 	 </li>
