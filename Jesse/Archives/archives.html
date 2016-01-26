@@ -96,11 +96,14 @@
 </style>
 
 <script>
+$(function(){
+$("#btn").click(function() {
+	alert(1);
+	$('html, body').animate({
+	scrollTop: $("#archives").offset().top
+	}, 2000);
+});
 
-$("#button").click(function() {
-$('html, body').animate({
-scrollTop: $("#archives").offset().top
-}, 2000);
 });
 </script>
 
@@ -123,7 +126,7 @@ scrollTop: $("#archives").offset().top
 
 	<a href="#archi" id="#button">
 	<div class="arrow-container">
-		<div class="arrow bounce"></div>
+		<div class="arrow bounce" id="btn"></div>
 	</div></a>
 
 	
