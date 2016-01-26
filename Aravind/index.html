@@ -1,99 +1,425 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>Events</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/animate.css">
+	<head> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
 	<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-	<header>
-		<div class="col-lg-12 text-center up-incoming animated fadeInDown">
-			<h1>Events</h1>
-		</div>
-	</header>
-	<section id="events">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 text-center left-incoming animated fadeInLeft">
-					<h3>Paper Presentation</h3>
-					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat.</p>
-				</div>
-				<div class="col-sm-6 text-center right-incoming animated fadeInRight">
-					<h3>Poster Presentation</h3>
-					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. </p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-6 text-center left-incoming-1 animated fadeInLeft">
-					<h3>Project Presentation</h3>
-					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. </p>
-				</div>
-				<div class="col-sm-6 text-center right-incoming-1 animated fadeInRight">
-					<h3>Coding</h3>
-					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. </p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-6 text-center left-incoming-2 animated fadeInLeft">
-					<h3>LAN Gaming</h3>
-					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. </p>
-				</div>
-				<div class="col-sm-6 text-center right-incoming-2 animated fadeInRight">
-					<h3>Technical Quiz</h3>
-					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. </p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-6 text-center left-incoming-3 animated fadeInLeft">
-					<h3>Culturals</h3>
-					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. </p>
-				</div>
-				<div class="col-sm-6 text-center right-incoming-3 animated fadeInRight">
-					<h3>Mock Interview</h3>
-					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. </p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<footer>
-		<div>
 
+	<link rel="stylesheet" href="css/animate.css">
 
-		</div>
-	</footer>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-	</script>
-	<script>
+	<style>
+	          
 			
-			$('div.up-incoming').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
-				$(this).removeClass('animated fadeInDown').delay(1500).addClass('animated rubberBand');
+	      * {  margin: 0; 
+			   padding: 0;
+			}
+			
+			body{
+			  background-color:black;
+              background-image:  linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent);
+	          background-size:50px 50px;
+			  margin:0 auto;
+			  margin:0px 0px 0px 0px;
+			  padding:0px 0px 0px 0px; 
+			  color:rgba(255, 255, 255,0.8);
+			  font-family:squared;
+			
+			}
+			
+			 @font-face{
+				  src:url("Fonts/Squared Display.ttf");
+				  font-family:squared;
+				} 
+				
+			ul{
+			 list-style-type:none;
+			}
+			a{
+			 text-decoration:none;
+			 color:black;
+			}
+			
+		   @media only screen and (max-width: 768px) { 
+			 .account  { margin-top:20px; } 
+			 .menu{ top:20%; }
+		  } 
+		
+		   @media only screen and (max-width: 620px) { 
+		      .wholeCanWrap{ display:none; }
+			   .menu{ top:20%; }
+		  }
+		  
+		  @media only screen and (max-width: 320px) { 
+		      .wholeCanWrap{ display:none; }
+			   .menu{ top:40%; }
+		  }
+		  
+			header{
+			  position:fixed;
+			  background-color:rgba(0, 255, 255,1);
+			  color:black;
+			  font-size:40px;
+			  width:100%;
+			  height:auto;
+			  border-bottom:1px solid rgba(0, 255, 255,0.8);
+			  font-family:squared;
+			  font-weight:bold;
+			  z-index:100;
+			  top:0px;
+			}
+			
+			header .title{
+			  margin-left:2px;
+			}
+
+            .account{
+			 float:right;
+			 font-size:40px;
+			}
+
+            .account li{
+			  float:left;
+			  margin-right:40px;
+			}			
+			 
+			.account li:hover a{
+			  color:white;
+			}
+			
+			.date{
+			 font-size:25px;
+			 margin:0px 0px 0px 4px;
+			}
+			
+			.menu{
+			  position:relative;
+			  margin-top:2%;		
+              width:200px;	
+              padding:3% 3% 3% 3%;			  
+			}
+			
+			.rightMenu{
+			   float:right;
+			   margin-right:1%;
+			}
+			
+			.leftMenu{
+			  float:left;
+			  margin-left:1%;
+			}
+			
+			.menu a{
+			   color:rgba(0, 255, 255,1);
+			}
+			
+			.menu li{
+			   margin-left:5%;
+			   margin-top:10%;
+			   text-align:center;
+			}
+			
+			.entity{
+			  position:relative;
+			  transition: all 0.3s;
+			  cursor:hand;
+			}
+			
+			.semi_arc {
+			  position:relative;
+			  width: 150px;
+			  height: 150px;
+			  border: 7px solid rgb(0, 255, 255);
+			  background:transparent;
+			  border-radius:50%;
+			  transform: rotateZ(0deg);
+			  transition: box-shadow 3s ease;
+			  text-align: center;
+			  color:white;
+			}
+
+			.entity:hover .semi_arc{
+			  box-shadow: 0px 0px 30px rgb(0, 255, 255);
+			  transition: 0.3s;
+			}
+			
+			.e4 {
+			  width: 99px;
+			  height:99px;
+			}
+			
+			.semi_arc_2 {
+			  content: "";
+			  position: absolute;
+			  width: 94%;
+			  height: 94%;
+			  left: 3%;
+			  top: 3%;
+			  border: 3px solid rgb(0, 255, 255);
+			  border-radius:50%;
+			  box-sizing:border-box;
+			  animation: rotate 4s linear infinite;
+			  text-align: center;
+			  line-height: 129px;
+			}
+			
+			.semi_arc_2:after {
+			  content: "";
+			  position: absolute;
+			  width: 94%;
+			  height: 94%;
+			  left: 3%;
+			  top: 3%;
+			  border: 5px solid rgba(0, 255, 255, 0.5);
+			  border-radius:50%;
+			  box-sizing:border-box;
+			  animation: rotate_anti 2s linear infinite;
+			  border-left: 5px solid transparent;
+			  border-right: 5px solid transparent;
+			}
+			
+			.e4_1 {
+			  border-color: rgba(0, 255, 255, 0.8);
+			  border-left: 5px solid transparent;
+			  border-right: 5px solid transparent;
+			}
+			
+			@keyframes rotate {
+			  0% { transform: rotateZ(0deg) }
+			100% { transform: rotateZ(360deg) }
+			}
+
+			@keyframes rotate_anti {
+			  0% { transform: rotateZ(360deg) }
+			100% { transform: rotateZ(0deg) }
+			}
+				
+			.text{
+			  position:absolute;
+			  color:rgb(0, 255, 255);
+			  font-size:30px;
+			  text-align:center;
+			  text-shadow:0px 0px 5px rgba(0, 255, 255, 0.8);
+			  transition:all 0.3s ease-in-out;
+			}
+			
+			.entity:hover .text a{
+			  color:rgba(255, 255, 255, 0.8);
+			  text-shadow:0px 0px 10px rgba(255, 255, 255, 0.8);
+			}
+			
+			.canvas-wrap{
+				position:relative;
+				justify:center;
+			}
+
+			.wholeCanWrap{
+			  position:fixed;
+			}
+			.canvas-wrap{
+				clear:both;
+				position:relative;
+			}
+			.canvas-wrap li{
+			   position:absolute;
+			   list-style-type:none;
+			}
+			   
+			.canvasCenter{
+				clear:both;
+				position:absolute;
+				border-radius:50%;
+				background-color:rgba(255, 255, 255,0.98);
+				box-shadow:0px 0px 50px rgba(255, 255, 255,1);
+				animation: glow 4s linear infinite;
+				text-align:center;
+			 }
+					
+			.canvasCenter p{
+			  margin-top:30%;
+			  text-align:center;
+			  color:black;
+			  font-size:4.5vw; 
+			  font-weight:bold;
+			} 
+			
+			@keyframes glow{
+				from{box-shadow:0px 0px 50px rgba(255, 255, 255,1);}
+				50%{ 
+					background-color:rgba(255, 255, 255,1);
+					box-shadow:0px 0px 50px rgba(0, 255, 255,1),0px 0px 60px rgba(255, 255, 255,1),0px 0px 65px rgba(255, 255, 255,1);
 				}
-			);			
+			}
+			
+			.socialIcons{
+			   clear:both;
+			   position:fixed;
+			   bottom:0;
+			   margin-bottom:0%;
+			   margin-left:41%;
+			  }
+			  
+			  .socialIcons li{
+				float:left;
+			    margin:5px 15px 5px 15px;
+			   }
+			   .socialIcons img{
+				 background-color:rgba(0, 255, 255, 0.5);
+			   }
+			   
+			   .socialIcons li:hover img{
+				 background-color:rgba(0, 255, 255,1);
+				 box-shadow:0px 0px 5px rgba(0, 255, 255,1);
+			   }
+			   
+			   .socialIcons li:hover a{
+				 text-shadow:0px 0px 5px rgba(255, 255, 255,1);
+			   }
+			    
+	
+	</style>
+	
+	<script>
+	 var cw;  
+	 $( window ).resize( function () {
+	    cw = window.innerWidth;
+		cw/=6;
+		cw /= 1.8213328;
+		cw *= 2;
+		$(".canvasCenter").css("width",cw);
+		$(".canvasCenter").css("height",cw);
+	    $(".canvas-wrap").css("width",window.innerWidth);
+		$(".canvas-wrap").css("height",window.innerHeight);
+		$(".canvasCenter").css("transform","translate("+((window.innerWidth)/2-cw/2)+"px,"+((window.innerHeight)/2-cw/2)+"px)");
+	});
+	  
+	  $(function(){
+	     cw = window.innerWidth;
+	     cw /=6;
+		 cw /= 1.8213328;
+		 cw *= 2;
+		$(".canvasCenter").css("width",cw);
+		$(".canvasCenter").css("height",cw);
+		$(".canvas-wrap").css("width",window.innerWidth);
+		$(".canvas-wrap").css("height",window.innerHeight);
+		$(".canvas-wrap li").css("width",cw);
+		$(".canvas-wrap li").css("height",cw);
+		$(".canvasCenter").css("transform","translate("+((window.innerWidth)/2-cw/2)+"px,"+((window.innerHeight)/2-cw/2)+"px)");
+		
+		 $('.wholeCanWrap').click(function(){
+		      
+		  });
+	  });
+	  
+	 
+	  
 	</script>
+	
+	</head>
+<body>
+
+<header>
+  <a href="" class="title text-center">QUEST 2016 <span class="date">13th to 14th March </span> </a> 
+  <ul class="account">
+    <li> <a href=""> login </a> </li>
+	<li> <a href=""> register </a> </li>
+  </ul>
+  
+ 
+</header>
+
+
+ <div class="wholeCanWrap">
+   <ul class="canvas-wrap">
+	  <li id="c1"><canvas id="canvas"></canvas></li>
+	  <li id="c2"><div class="canvasCenter"> <p>Quest<br>2016 </p></div></li>
+		<script src="canvas.js"></script>
+	</ul>
+  </div>
+    <ul class="menu leftMenu">
+			  <li>
+			   <div class="entity" >
+			     <div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					<div class="text" style="margin-top:29px; font-size: 15px;"> <a href="">Paper Presentation</a></div>
+				</div>  
+			   </div>
+			  </li>
+			  
+			  <li>	  
+			   <div class="entity">
+				<div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					 <div class="text" style="margin-top:29px;font-size:15px;"> <a href="">Poster Presentation</a></div>
+				</div>
+			   </div>
+			  </li>
+			  
+			  <li>	  
+			   <div class="entity">
+				<div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					 <div class="text" style="margin-top:29px;font-size:15px;"> <a href="">Project Presentation</a></div>
+				</div>
+			   </div>
+			 </li>
+
+			 <li>
+			   <div class="entity" >
+			     <div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					<div class="text" style="margin-top:33px;font-size:25px;"> <a href="">Coding</a></div>
+				</div>  
+			   </div>
+			  </li>
+		</ul>   
+		
+		 <ul class="menu rightMenu">
+			  <li>
+			   <div class="entity" >
+			     <div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					<div class="text" style="margin-top:60px; margin-left:30px;"><a href="">Gallery</a></div>
+				</div>
+			   </div>
+			  </li>
+			  
+			  <li>	  
+			   <div class="entity">
+				<div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					 <div class="text" style="margin-top:60px; margin-left:25px; font-size:24px;"><a href="">Our Team</a></div>
+				</div>
+		       </div>
+			  </li>
+			  
+			  <li>	  
+			   <div class="entity">
+				<div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					 <div class="text" style="margin-top:60px; margin-left:20px; font-size:23px;"><a href="">Hospitality </a> </div>
+				</div>
+		      </div>
+			 </li>
+
+			 <li>
+			   <div class="entity" >
+			     <div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					<div class="text" style="margin-top:60px; margin-left:30px;"><a href="">Gallery</a></div>
+				</div>
+			   </div>
+			  </li>
+		</ul>   
+		
+		
+		
+  <ul class="socialIcons">
+    <li> <a href=""> <p><img src="png\facebook.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\google.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\youtube.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\twitter.png">  </p></a> </li>
+  </ul>
+ 
+ 
 </body>
 </html>
+	

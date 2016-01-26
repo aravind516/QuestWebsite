@@ -22,3 +22,13 @@ div.right-incoming-3 {
 h1 {
 	font-size: 4em;
 }
+p {
+	text-align: justify;
+	color: rgb(0,150,255);
+}
+.text-center {
+	text-align: center;
+}
+body {
+	background-color: rgb(0,0,0);
+}
