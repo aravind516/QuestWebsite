@@ -11,7 +11,7 @@
 			
 			body{
 			  background-color:black;
-              background-image:  linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
+              background-image:  linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent);
 	          background-size:50px 50px;
 			  margin:0 auto;
 			  margin:0px 0px 0px 0px;
@@ -36,19 +36,19 @@
 			
 		   @media only screen and (max-width: 768px) { 
 			 .account  { margin-top:20px; } 
-			 
-		     .menu{ top:40%; }
-			 
-			 .rightMenu{ 
-			   float:none;
-			   margin-left:0px;
-			  }
+			 .menu{ top:20%; }
 		  } 
 		
-		   @media only screen and (max-width: 320px) { 
+		   @media only screen and (max-width: 620px) { 
 		      .wholeCanWrap{ display:none; }
-			  .socialIcons li{ float:none;}
+			   .menu{ top:20%; }
 		  }
+		  
+		  @media only screen and (max-width: 320px) { 
+		      .wholeCanWrap{ display:none; }
+			   .menu{ top:40%; }
+		  }
+		  
 			header{
 			  position:fixed;
 			  background-color:rgba(0, 255, 255,1);
@@ -60,6 +60,11 @@
 			  font-family:squared;
 			  font-weight:bold;
 			  z-index:100;
+			  top:0px;
+			}
+			
+			header .title{
+			  margin-left:2px;
 			}
 
             .account{
@@ -77,19 +82,20 @@
 			}
 			
 			.date{
-			 position:fixed;
 			 font-size:25px;
-			 color:white;
-			 margin:4px 0px 0px 4px;
+			 margin:0px 0px 0px 4px;
 			}
 			
 			.menu{
 			  position:relative;
-			  margin-top:5%;			 
+			  margin-top:2%;		
+              width:200px;	
+              padding:3% 3% 3% 3%;			  
 			}
+			
 			.rightMenu{
-			 float:right;
-			 margin-right:1%;
+			   float:right;
+			   margin-right:1%;
 			}
 			
 			.leftMenu{
@@ -102,10 +108,9 @@
 			}
 			
 			.menu li{
-			  width:200px;
-			  margin-left:5px;
-			  margin-top:20px;
-			  text-align:center;
+			   margin-left:5%;
+			   margin-top:10%;
+			   text-align:center;
 			}
 			
 			.entity{
@@ -116,15 +121,14 @@
 			
 			.semi_arc {
 			  position:relative;
-			  width: 100px;
-			  height: 100px;
+			  width: 150px;
+			  height: 150px;
 			  border: 7px solid rgb(0, 255, 255);
 			  background:transparent;
 			  border-radius:50%;
 			  transform: rotateZ(0deg);
 			  transition: box-shadow 3s ease;
 			  text-align: center;
-			  //line-height: 100px;
 			  color:white;
 			}
 
@@ -135,7 +139,7 @@
 			
 			.e4 {
 			  width: 150px;
-			  height: 150px;
+			  height:150px;
 			}
 			
 			.semi_arc_2 {
@@ -229,7 +233,6 @@
 			  margin-top:30%;
 			  text-align:center;
 			  color:black;
-			  //font-size:60px; 
 			  font-size:4.5vw; 
 			  font-weight:bold;
 			} 
@@ -310,13 +313,12 @@
 <body>
 
 <header>
-  <a href="">QUEST 2K16</a> 
-  <p class="date"> 13th to 14th March </p>
-  
+  <a href="" class="title">QUEST 2016 <span class="date">13th to 14th March </span> </a> 
   <ul class="account">
     <li> <a href=""> login </a> </li>
 	<li> <a href=""> register </a> </li>
-  <ul>
+  </ul>
+  
  
 </header>
 
@@ -334,8 +336,7 @@
 			     <div class="semi_arc e4">
 					<div class="semi_arc_2 e4_1"></div>
 					<div class="text" style="margin-top:60px; margin-left:30px;"> <a href="">Events </a></div>
-				</div>
-				  
+				</div>  
 			   </div>
 			  </li>
 			  
@@ -345,7 +346,6 @@
 					<div class="semi_arc_2 e4_1"></div>
 					 <div class="text" style="margin-top:60px; margin-left:20px; font-size:24px;"> <a href=""> Workshops </a></div>
 				</div>
-				 
 			   </div>
 			  </li>
 			  
@@ -355,7 +355,6 @@
 					<div class="semi_arc_2 e4_1"></div>
 					 <div class="text" style="margin-top:50px; margin-left:40px; font-size:30px;"> <a href=""><p>About</p><p> Us</p> </a></div>
 				</div>
-				 
 			   </div>
 			 </li>
 		</ul>   
@@ -367,7 +366,6 @@
 					<div class="semi_arc_2 e4_1"></div>
 					<div class="text" style="margin-top:60px; margin-left:30px;"><a href="">Gallery</a></div>
 				</div>
-				  
 			   </div>
 			  </li>
 			  
@@ -377,8 +375,7 @@
 					<div class="semi_arc_2 e4_1"></div>
 					 <div class="text" style="margin-top:60px; margin-left:25px; font-size:24px;"><a href="">Our Team</a></div>
 				</div>
-				 
-			   </div>
+		       </div>
 			  </li>
 			  
 			  <li>	  
@@ -387,8 +384,7 @@
 					<div class="semi_arc_2 e4_1"></div>
 					 <div class="text" style="margin-top:60px; margin-left:20px; font-size:23px;"><a href="">Hospitality </a> </div>
 				</div>
-				 
-			   </div>
+		      </div>
 			 </li>
 		</ul>   
 		
