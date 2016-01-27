@@ -29,6 +29,7 @@ left: 0;
 
 .slideshow > div:nth-child(1) {
 background-image: url("images/image-slider-1.jpg");
+background-attachment: fixed;
 -webkit-filter: blur(5px);
 -moz-filter: blur(5px);
 -o-filter: blur(5px);
@@ -70,6 +71,7 @@ opacity: 0;
 }
 .slideshow > div:nth-child(2) {
 background-image: url("images/image-slider-2.jpg");
+background-attachment: fixed;
 -webkit-filter: blur(5px);
 -moz-filter: blur(5px);
 -o-filter: blur(5px);
@@ -111,6 +113,7 @@ opacity: 0;
 }
 .slideshow > div:nth-child(3) {
 background-image: url("images/image-slider-3.jpg");
+background-attachment: fixed;
 -webkit-filter: blur(5px);
 -moz-filter: blur(5px);
 -o-filter: blur(5px);
@@ -152,6 +155,7 @@ opacity: 0;
 }
 .slideshow > div:nth-child(4) {
 background-image: url("images/image-slider-4.jpg");
+background-attachment: fixed;
 -webkit-filter: blur(5px);
 -moz-filter: blur(5px);
 -o-filter: blur(5px);
@@ -192,6 +196,163 @@ opacity: 1;
 }
 }
 
+/****************  Gallery  ****************/
+
+* {
+  box-sizing: border-box;
+}
+
+.pictures-gallery {
+  margin-top: 5000px;
+  width: 90%;
+  margin: 800px auto;
+  max-width: 1100px;
+}
+
+.pictures {
+  position: relative;
+  display: block;
+  width: 90%;
+  height: 250px;
+  margin: 0 auto 2rem;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0px 15px 50px rgba(0, 250, 250, 0.5);
+  overflow: hidden;
+  transition: all .4s ease;
+}
+
+@media screen and (min-width: 37.5em) {
+  .pictures {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 45em) {
+  .pictures {
+    display: inline-block;
+    width: 45%;
+    margin-left: 25px;
+  }
+}
+
+.pictures-img {
+  width: 90%;
+  display: block;
+  margin-top: 50%;
+  transform: translateY(50%);
+  margin: 0 auto;
+}
+
+.image1 {
+  background-image: url("images/image-slider-1.jpg");
+}
+
+.image2 {
+  background-image: url("images/image-slider-2.jpg");
+}
+
+.image3 {
+  background-image: url("images/image-slider-3.jpg");
+}
+
+.image4 {
+  background-image: url("images/image-slider-4.jpg");
+}
+
+.image5 {
+  background-image: url("images/image-slider-5.jpg");
+}
+
+
+/*********** title ********/
+
+
+.case {
+  margin:0px;
+  width: 100%;
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+@media screen and (max-width: 35em) {
+  .case {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.case .img-wrap, .case figcaption {
+  width: 100%;
+}
+
+@media screen and (max-width: 35em) {
+  .case .img-wrap, .case figcaption {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 35em) {
+  .case figcaption {
+    padding-top: 1rem;
+    padding-left: 0;
+  }
+}
+
+.case figcaption .title:after {
+  content: '';
+  position: absolute;
+  top: 700px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: #2e2e31;
+  background-image: -webkit-linear-gradient(0deg, #2e2e31, #d5d5d7), -webkit-linear-gradient(0deg, #d5d5d7, #2e2e31);
+  background-image: linear-gradient(90deg, #2e2e31, #d5d5d7), linear-gradient(90deg, #d5d5d7, #2e2e31);
+  background-size: 15% 100%;
+  background-position: -30% 0, 130% 0;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 1px #4f5055;
+  -webkit-animation: scan 4s infinite;
+          animation: scan 4s infinite;
+}
+
+@-webkit-keyframes scan {
+  0% {
+    background-position: -20% 0, 120% 0;
+  }
+  50% {
+    background-position: 120% 0, 120% 0;
+  }
+  100% {
+    background-position: 120% 0, -20% 0;
+  }
+}
+@keyframes scan {
+  0% {
+    background-position: -20% 0, 120% 0;
+  }
+  50% {
+    background-position: 120% 0, 120% 0;
+  }
+  100% {
+    background-position: 120% 0, -20% 0;
+  }
+}
+
+.archives-title {
+	width: 100%;
+	position: absolute;
+	top: 710px;
+	color: rgba(0, 250, 250 ,0.8);
+	font-size: 40px;
+	text-align: center;
+
+}
 
 	</style>
 
@@ -245,22 +406,116 @@ background-size: cover;
 
 -->
 
+<!--
+
+*{
+  box-sizing:border-box;
+}
+.pictures-gallery{
+  margin-top:50px;
+  width: 90%;
+  margin:50px auto;
+  max-width:1100px;
+}
+.pictures {
+  position: relative;
+  display:block;
+  width: 90%;
+  height: 250px;
+  margin:0 auto 2rem;
+	background-size:cover;
+  border-radius:10px;
+  box-shadow:0px 25px 50px rgba(0,0,0,.5);
+  overflow:hidden;
+  transition:all .4s ease;
+  @media screen and (min-width:37.5em){
+    height: 300px;
+  }
+  @media screen and (min-width:45em) {
+    display:inline-block;
+  	width: 45%;
+    margin-left: 25px;
+  }
+}
+
+  .pictures-img{
+    width: 90%;
+    display:block;
+  	margin-top:50%;
+    transform:translateY(50%);
+    margin:0 auto;
+  }
+ 
+.image1{
+  background-image: url('http://www.livingfengshui.ca/wp-content/uploads/2014/01/unsplash-contemplative.jpg');
+}
+
+-->
+
 <body>
 
 <div class="slideshow">
-  <!-- Add a new DIV element for each image in images SCSS array-->
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
 </div>
-	
-	<div class="centered">
-		<object width="610" height="315"
-			data="https://www.youtube.com/embed/HXywmnH1Wtc">
-		</object>
-	</div>
 
+<div class="centered">
+<object width="610" height="315"
+data="https://www.youtube.com/embed/HXywmnH1Wtc">
+</object>
+</div>
+
+<div class="gallery-title">
+	
+	<figure class="case">
+  <figcaption>
+    <h1 class="title"></h1>
+  </figcaption>
+</figure>
+<br>
+<div class="archives-title">Archives</div>
+<br>
+<figure class="case">
+  <figcaption>
+    <h1 class="title"></h1>
+  </figcaption>
+</figure>
+
+</div>
+
+<div class="pictures-gallery">
+<div class="pictures image1">
+<figure>
+<img class="pictures-img"/>
+</figure>
+</div>
+
+<div class="pictures image2">
+<figure>
+<img class="pictures-img"/>
+</figure>
+</div>
+
+<div class="pictures image3">
+<figure>
+<img class="pictures-img"/>
+</figure>
+</div>
+
+<div class="pictures image4">
+<figure>
+<img class="pictures-img"/>
+</figure>
+</div>
+
+<div class="pictures image5">
+<figure>
+<img class="pictures-img"/>
+</figure>
+</div>
+</div>
 
 </body>
 </html>
