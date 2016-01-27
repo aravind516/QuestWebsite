@@ -16,14 +16,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 text-center left-incoming animated fadeInLeft">
-					<h3>Paper Presentation</h3>
+					<h3 class="color">Paper Presentation</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. </p>
 				</div>
 				<div class="col-sm-6 text-center right-incoming animated fadeInRight">
-					<h3>Poster Presentation</h3>
+					<h3 class="color">Poster Presentation</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -32,14 +32,14 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-6 text-center left-incoming-1 animated fadeInLeft">
-					<h3>Project Presentation</h3>
+					<h3 class="color">Project Presentation</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. </p>
 				</div>
 				<div class="col-sm-6 text-center right-incoming-1 animated fadeInRight">
-					<h3>Coding</h3>
+					<h3 class="color">Coding</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -48,14 +48,14 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-6 text-center left-incoming-2 animated fadeInLeft">
-					<h3>LAN Gaming</h3>
+					<h3 class="color">LAN Gaming</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. </p>
 				</div>
 				<div class="col-sm-6 text-center right-incoming-2 animated fadeInRight">
-					<h3>Technical Quiz</h3>
+					<h3 class="color">Technical Quiz</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -64,14 +64,14 @@
 			</div>
 			<div class="row">
 				<div class="col-sm-6 text-center left-incoming-3 animated fadeInLeft">
-					<h3>Culturals</h3>
+					<h3 class="color">Culturals</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 					consequat. </p>
 				</div>
 				<div class="col-sm-6 text-center right-incoming-3 animated fadeInRight">
-					<h3>Mock Interview</h3>
+					<h3 class="color">Mock Interview</h3>
 					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -117,7 +117,12 @@
 		$('div.left-incoming-3').one(endAnimation,function() {
 	 			$(this).removeClass('animated fadeInLeft')
 			}
-		);					
+		);
+		$(document).ready(function(){
+			$("h3 class="color"").hover(function(){
+      			$("h3 class="color"").toggleClass("color");  //Toggle the active class to the area is hovered
+  			});
+		});					
 	</script>
 </body>
 </html>

@@ -22,7 +22,7 @@ div.right-incoming-3 {
 }
 h1 {
 	font-size: 4em;
-	
+	color: rgb(0,255,255);
 }
 p {
 	text-align: justify;
@@ -41,4 +41,7 @@ body {
 }
 .register {
 	position: absolute;
+}
+.color {
+	color: rgb(0,255,255);
 }
