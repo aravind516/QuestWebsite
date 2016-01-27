@@ -1,34 +1,13 @@
 <html>
 	<head> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<link rel="stylesheet" href="../animate.css">
+	<link rel="stylesheet" href="../FrameWorks/animate.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/homepage-menu.css">
+	<link rel="stylesheet" href="css/canvas.css">
+	<link rel="stylesheet" href="css/footer.css">
+	
 	<style>
-	          
-			
-	      * {  margin: 0; 
-			   padding: 0;
-			}
-			
-			body{
-			  background-color:black;
-              background-image:  linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent);
-	          background-size:50px 50px;
-			  margin:0 auto;
-			  margin:0px 0px 0px 0px;
-			  padding:0px 0px 0px 0px; 
-			  color:rgba(255, 255, 255,0.8);
-			  font-family:squared;
-			
-			}
-			
-			 @font-face{
-				  src:url("Fonts/Squared Display.ttf");
-				  font-family:squared;
-				} 
-				
-			ul{
-			 list-style-type:none;
-			}
 			a{
 			 text-decoration:none;
 			 color:black;
@@ -49,277 +28,49 @@
 			   .menu{ top:40%; }
 		  }
 		  
-			header{
-			  position:fixed;
-			  background-color:rgba(0, 255, 255,1);
-			  color:black;
-			  font-size:40px;
-			  width:100%;
-			  height:auto;
-			  border-bottom:1px solid rgba(0, 255, 255,0.8);
-			  font-family:squared;
-			  font-weight:bold;
-			  z-index:100;
-			  top:0px;
-			}
-			
-			header .title{
-			  margin-left:2px;
-			}
-
-            .account{
-			 float:right;
-			 font-size:40px;
-			}
-
-            .account li{
-			  float:left;
-			  margin-right:40px;
-			}			
-			 
-			.account li:hover a{
-			  color:white;
-			}
-			
-			.date{
-			 font-size:25px;
-			 margin:0px 0px 0px 4px;
-			}
-			
-			.menu{
-			  position:relative;
-			  margin-top:2%;		
-              width:200px;	
-              padding:3% 3% 3% 3%;			  
-			}
-			
-			.rightMenu{
-			   float:right;
-			   margin-right:1%;
-			}
-			
-			.leftMenu{
-			  float:left;
-			  margin-left:1%;
-			}
-			
-			.menu a{
-			   color:rgba(0, 255, 255,1);
-			}
-			
-			.menu li{
-			   margin-left:5%;
-			   margin-top:10%;
-			   text-align:center;
-			}
-			
-			.entity{
-			  position:relative;
-			  transition: all 0.3s;
-			  cursor:hand;
-			}
-			
-			.semi_arc {
-			  position:relative;
-			  width: 150px;
-			  height: 150px;
-			  border: 7px solid rgb(0, 255, 255);
-			  background:transparent;
-			  border-radius:50%;
-			  transform: rotateZ(0deg);
-			  transition: box-shadow 3s ease;
-			  text-align: center;
-			  color:white;
-			}
-
-			.entity:hover .semi_arc{
-			  box-shadow: 0px 0px 30px rgb(0, 255, 255);
-			  transition: 0.3s;
-			}
-			
-			.e4 {
-			  width: 150px;
-			  height:150px;
-			}
-			
-			.semi_arc_2 {
-			  content: "";
-			  position: absolute;
-			  width: 94%;
-			  height: 94%;
-			  left: 3%;
-			  top: 3%;
-			  border: 3px solid rgb(0, 255, 255);
-			  border-radius:50%;
-			  box-sizing:border-box;
-			  animation: rotate 4s linear infinite;
-			  text-align: center;
-			  line-height: 129px;
-			}
-			
-			.semi_arc_2:after {
-			  content: "";
-			  position: absolute;
-			  width: 94%;
-			  height: 94%;
-			  left: 3%;
-			  top: 3%;
-			  border: 5px solid rgba(0, 255, 255, 0.5);
-			  border-radius:50%;
-			  box-sizing:border-box;
-			  animation: rotate_anti 2s linear infinite;
-			  border-left: 5px solid transparent;
-			  border-right: 5px solid transparent;
-			}
-			
-			.e4_1 {
-			  border-color: rgba(0, 255, 255, 0.8);
-			  border-left: 5px solid transparent;
-			  border-right: 5px solid transparent;
-			}
-			
-			@keyframes rotate {
-			  0% { transform: rotateZ(0deg) }
-			100% { transform: rotateZ(360deg) }
-			}
-
-			@keyframes rotate_anti {
-			  0% { transform: rotateZ(360deg) }
-			100% { transform: rotateZ(0deg) }
-			}
-				
-			.text{
-			  position:absolute;
-			  color:rgb(0, 255, 255);
-			  font-size:30px;
-			  text-align:center;
-			  text-shadow:0px 0px 5px rgba(0, 255, 255, 0.8);
-			  transition:all 0.3s ease-in-out;
-			}
-			
-			.entity:hover .text a{
-			  color:rgba(255, 255, 255, 0.8);
-			  text-shadow:0px 0px 10px rgba(255, 255, 255, 0.8);
-			}
-			
-			.canvas-wrap{
-				position:relative;
-				justify:center;
-			}
-
-			.wholeCanWrap{
-			  position:fixed;
-			}
-			.canvas-wrap{
-				clear:both;
-				position:relative;
-			}
-			.canvas-wrap li{
-			   position:absolute;
-			   list-style-type:none;
-			}
-			   
-			.canvasCenter{
-				clear:both;
-				position:absolute;
-				border-radius:50%;
-				background-color:rgba(255, 255, 255,0.98);
-				box-shadow:0px 0px 50px rgba(255, 255, 255,1);
-				animation: glow 4s linear infinite;
-				text-align:center;
-			 }
-					
-			.canvasCenter p{
-			  margin-top:30%;
-			  text-align:center;
-			  color:black;
-			  font-size:4.5vw; 
-			  font-weight:bold;
-			} 
-			
-			@keyframes glow{
-				from{box-shadow:0px 0px 50px rgba(255, 255, 255,1);}
-				50%{ 
-					background-color:rgba(255, 255, 255,1);
-					box-shadow:0px 0px 50px rgba(0, 255, 255,1),0px 0px 60px rgba(255, 255, 255,1),0px 0px 65px rgba(255, 255, 255,1);
-				}
-			}
-			
-			.socialIcons{
-			   clear:both;
-			   position:fixed;
-			   bottom:0;
-			   margin-bottom:0%;
-			   margin-left:41%;
-			  }
-			  
-			  .socialIcons li{
-				float:left;
-			    margin:5px 15px 5px 15px;
-			   }
-			   .socialIcons img{
-				 background-color:rgba(0, 255, 255, 0.5);
-			   }
-			   
-			   .socialIcons li:hover img{
-				 background-color:rgba(0, 255, 255,1);
-				 box-shadow:0px 0px 5px rgba(0, 255, 255,1);
-			   }
-			   
-			   .socialIcons li:hover a{
-				 text-shadow:0px 0px 5px rgba(255, 255, 255,1);
-			   }
-			    
-	
+		  .socialIcons li,.menu li{
+		    display:none;
+		  }
+		 .glow1{
+		   background-color:rgba(0, 255, 255,1);
+	       box-shadow:0px 0px 5px rgba(0, 255, 255,1);
+		 }
+	      .glow2{
+		    text-shadow:0px 0px 5px rgba(255, 255, 255,1);
+		  }
 	</style>
 	
 	<script>
-	 var cw;  
-	 $( window ).resize( function () {
-	    cw = window.innerWidth;
-		cw/=6;
-		cw /= 1.8213328;
-		cw *= 2;
-		$(".canvasCenter").css("width",cw);
-		$(".canvasCenter").css("height",cw);
-	    $(".canvas-wrap").css("width",window.innerWidth);
-		$(".canvas-wrap").css("height",window.innerHeight);
-		$(".canvasCenter").css("transform","translate("+((window.innerWidth)/2-cw/2)+"px,"+((window.innerHeight)/2-cw/2)+"px)");
-	});
-	  
 	  $(function(){
-	     cw = window.innerWidth;
-	     cw /=6;
-		 cw /= 1.8213328;
-		 cw *= 2;
-		$(".canvasCenter").css("width",cw);
-		$(".canvasCenter").css("height",cw);
-		$(".canvas-wrap").css("width",window.innerWidth);
-		$(".canvas-wrap").css("height",window.innerHeight);
-		$(".canvas-wrap li").css("width",cw);
-		$(".canvas-wrap li").css("height",cw);
-		$(".canvasCenter").css("transform","translate("+((window.innerWidth)/2-cw/2)+"px,"+((window.innerHeight)/2-cw/2)+"px)");
-		
-		 $('.wholeCanWrap').click(function(){
-		      
-		  });
+	     $('.wholeCanWrap').addClass('animated zoomIn');
+	     $('.menu li').delay(1000).queue(function(){ 
+		       $(this).show(); 
+			   $('.leftMenu li').addClass("animated slideInLeft"); $(this).dequeue(); 
+			   $('.rightMenu li').addClass("animated slideInRight"); $(this).dequeue(); 
+		});
+	     $('.socialIcons li').delay(2000).queue(function(){ 
+		       $(this).show(); 
+			   $('.socialIcons li img').addClass("glow1"); $(this).dequeue(); 
+			   $('.socialIcons li a').addClass("glow2"); $(this).dequeue(); 
+			   $(this).addClass("animated flash"); $(this).dequeue(); 
+			   $(this).delay(2500).queue(function(){
+			      $('.socialIcons li img').removeClass('glow1');
+			      $('.socialIcons li a').removeClass('glow2');
+			   });
+		});
 	  });
-	  
-	 
-	  
+	
 	</script>
 	
 	</head>
 <body>
 
 <header>
-  <a href="" class="title">QUEST 2016 <span class="date">13th & 14th March</span> </a> 
+  <a href="" class="title">QUEST 2016 <span class="date">13th and 14th March </span> </a> 
   <ul class="account">
-    <li> <a href=""> login </a> </li>
-	<li> <a href=""> register </a> </li>
+    <li> <a href="Form.html"> login </a> </li>
+	<li> <a href="Form.html"> register </a> </li>
   </ul>
-  
- 
 </header>
 
 
@@ -327,7 +78,7 @@
    <ul class="canvas-wrap">
 	  <li id="c1"><canvas id="canvas"></canvas></li>
 	  <li id="c2"><div class="canvasCenter"> <p>Quest<br>2016 </p></div></li>
-		<script src="canvas.js"></script>
+		<script src="script/canvas.js"></script>
 	</ul>
   </div>
     <ul class="menu leftMenu">
@@ -335,7 +86,7 @@
 			   <div class="entity" >
 			     <div class="semi_arc e4">
 					<div class="semi_arc_2 e4_1"></div>
-					<div class="text" style="margin-top:60px; margin-left:30px;"> <a href="">Events </a></div>
+					<div class="text" style="margin-top:60px; margin-left:30px;"> <a href="events.html">Events </a></div>
 				</div>  
 			   </div>
 			  </li>
@@ -344,7 +95,7 @@
 			   <div class="entity">
 				<div class="semi_arc e4">
 					<div class="semi_arc_2 e4_1"></div>
-					 <div class="text" style="margin-top:60px; margin-left:20px; font-size:24px;"> <a href=""> Workshops </a></div>
+					 <div class="text" style="margin-top:60px; margin-left:20px; font-size:24px;"> <a href="workshop.html"> Workshops </a></div>
 				</div>
 			   </div>
 			  </li>
@@ -364,7 +115,7 @@
 			   <div class="entity" >
 			     <div class="semi_arc e4">
 					<div class="semi_arc_2 e4_1"></div>
-					<div class="text" style="margin-top:60px; margin-left:30px;"><a href="">Gallery</a></div>
+					<div class="text" style="margin-top:60px; margin-left:30px;"><a href="Archives/archives.html">Gallery</a></div>
 				</div>
 			   </div>
 			  </li>
@@ -373,7 +124,7 @@
 			   <div class="entity">
 				<div class="semi_arc e4">
 					<div class="semi_arc_2 e4_1"></div>
-					 <div class="text" style="margin-top:60px; margin-left:25px; font-size:24px;"><a href="">Our Team</a></div>
+					 <div class="text" style="margin-top:60px; margin-left:25px; font-size:24px;"><a href="team.html">Our Team</a></div>
 				</div>
 		       </div>
 			  </li>
@@ -387,8 +138,6 @@
 		      </div>
 			 </li>
 		</ul>   
-		
-		
 		
   <ul class="socialIcons">
     <li> <a href=""> <p><img src="png\facebook.png"> </p> </a> </li>

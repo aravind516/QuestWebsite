@@ -2,31 +2,11 @@
 <head>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
 
 <style>
-     *{   
-        margin:0px 0px 0px 0px;
-		padding:0 0 0 0;
-	  }
-	 @font-face{
-		 src:url("Fonts/Squared Display.ttf");
-		 font-family:squared;
-	} 
-	body{
-		background-color:black;
-     	font-size:40px;	
-		margin:0px 0px 0px 0px;
-		padding:0px 0px 0px 0px;
-		background-image:  linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%, transparent 77%, transparent);
-        height:100%;
-	    background-size:50px 50px;
-	    margin:0 auto;
-		color:rgba(0,255,255,1);
-		font-family:squared;
-	}
-	
-	a{ text-decoration:none; }
-	
+    
 	.menu{
 	   position:relative;
 	   margin:0 auto;
@@ -36,10 +16,12 @@
 	   font-family:squared; 
 	   float:left;
 	   margin-top:15%; 
+	   margin-left:2%;
+	   color:rgba(0, 255, 255,1);
 	  }
 	 
 	 .menu li{
-	   cursor:hand pointer;
+	   cursor:hand;
 	   text-align:center;
 	   padding:5px 5px 5px 5px;
      } 
@@ -96,7 +78,11 @@
 	margin-left:25%;
 	display:none;
 	text-align:center;
-   }	
+   }
+
+    .team-content h2{
+	  font-size:40px;
+	}   
 	
    .container{
     font: 10pt normal Arial, sans-serif;
@@ -131,10 +117,14 @@
 	color: #fff;
 	z-index:10;
 	position:absolute;
+	background-image:  linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent);
+	background-size:50px 50px;
+	background-color:rgba(0,255,255,0.5);
 	height:200px;
 	width:200px;
 	display:block;
-    bottom:-200px;
+	top:-200px;
+    //bottom:-200px;
 	text-align:center;
 	-webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;.
@@ -149,21 +139,26 @@
     margin-top:40%;
  }
 
-  
  .container .box:hover{
    box-shadow:0px 0px 5px rgba(255,255,255,1),0px 0px 10px rgba(255,255,255,1);
  }
  
  .container .box:hover .caption{
-    -moz-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
+    -moz-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
  }	
  
+
  .container .box:hover img{
     margin: -70px 0px 0px 0px; 
   } 
+  
+ .textGlow{
+   color:white;
+   text-shadow:0px 0px 5px white;
+ } 
 </style>
 
 <script>
@@ -171,12 +166,15 @@
      $('.team1').show();
 	 var cur,prev;
 	  cur = "team1";
+	  $('#'+cur).addClass("textGlow");
+	  
 	 $('.team-menu li').click(function(){
 	    prev = cur;
+		$('#'+prev).removeClass("textGlow");
 	    cur = $(this).attr('id');
 		$('.'+prev).hide();
 		$('.'+cur).show();
-		
+		$('#'+cur).addClass("textGlow");
 	 });
 	 
   });
@@ -186,6 +184,14 @@
 </head>
 
 <body>
+<header>
+  <a href="" class="title">QUEST 2016 <span class="date">13th to 14th March </span> </a> 
+  <ul class="account">
+    <li> <a href=""> login </a> </li>
+	<li> <a href=""> register </a> </li>
+  </ul>
+</header>
+
  <aside>
   <ul class="team-menu menu">
 	 <li id="team1"> <hr class="hr1">  team 1  <hr class="hr2"> </li>
@@ -199,7 +205,7 @@
    <ul class="container">
      <li> 
 		<div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption"> 
 			  <p> My Name <br> 039402394</p>
 			  </span>
@@ -209,7 +215,7 @@
 	 
 	  <li> 
 		 <div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption"> 
 			  <p> My Name <br> 039402394</p>
 			  </span>
@@ -219,7 +225,7 @@
 	 
 	  <li> 
 		<div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption"> 
 			  <p> My Name <br> 039402394</p>
 			  </span>
@@ -229,7 +235,7 @@
 	 
 	  <li> 
 		 <div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption"> 
 			  <p> My Name <br> 039402394</p>
 			  </span>
@@ -244,7 +250,7 @@
    <ul class="container">
      <li> 
 		<div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption"> 
 			  <p> Name <br> 039402394</p>
 			  </span>
@@ -254,7 +260,7 @@
 	 
 	  <li> 
 		 <div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption"> 
 			  <p> My Name <br> 039402394</p>
 			  </span>
@@ -264,7 +270,7 @@
 	 
 	  <li> 
 		<div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption"> 
 			  <p> My Name <br>  039402394</p>
 			  </span>
@@ -274,7 +280,7 @@
 	 
 	  <li> 
 		 <div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption"> 
 			  <p> My Name <br>  039402394</p>
 			  </span>
@@ -290,7 +296,7 @@
  <ul class="container">
      <li> 
 		<div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption simple-caption "> 
 			  <p> My Name <br> 039402394</p>
 			  </span>
@@ -300,7 +306,7 @@
 	 
 	  <li> 
 		 <div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption simple-caption "> 
 			  <p> My Name <br> 039402394</p>
 			  </span>
@@ -310,7 +316,7 @@
 	 
 	  <li> 
 		<div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption simple-caption "> 
 			  <p> My Name <br> 039402394</p>
 			  </span>
@@ -320,7 +326,7 @@
 	 
 	  <li> 
 		 <div id="box1" class="box">
-			  <img id="image1" src="team-img.jpg">
+			  <img id="image1" src="team-images/team-img.jpg">
 			  <span class="caption simple-caption "> 
 			  <p> My Name <br> 039402394</p>
 			  </span>
@@ -329,6 +335,14 @@
 	 </li>
    </ul>	 
  </div>  
+	
+ 		
+  <ul class="socialIcons">
+    <li> <a href=""> <p><img src="png\facebook.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\google.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\youtube.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\twitter.png">  </p></a> </li>
+  </ul>
 	
 
 </body>

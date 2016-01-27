@@ -69,3 +69,35 @@ var x =500;
 $(window).resize(function(){draw();});
 draw();
 setInterval(draw,30);
+
+ var cw;  
+	 $( window ).resize( function () {
+	    cw = window.innerWidth;
+		cw/=6;
+		cw /= 1.8213328;
+		cw *= 2;
+		$(".canvasCenter").css("width",cw);
+		$(".canvasCenter").css("height",cw);
+	    $(".canvas-wrap").css("width",window.innerWidth);
+		$(".canvas-wrap").css("height",window.innerHeight);
+		$(".canvasCenter").css("transform","translate("+((window.innerWidth)/2-cw/2)+"px,"+((window.innerHeight)/2-cw/2)+"px)");
+	});
+	  
+	  $(function(){
+	     cw = window.innerWidth;
+	     cw /=6;
+		 cw /= 1.8213328;
+		 cw *= 2;
+		$(".canvasCenter").css("width",cw);
+		$(".canvasCenter").css("height",cw);
+		$(".canvas-wrap").css("width",window.innerWidth);
+		$(".canvas-wrap").css("height",window.innerHeight);
+		$(".canvas-wrap li").css("width",cw);
+		$(".canvas-wrap li").css("height",cw);
+		$(".canvasCenter").css("transform","translate("+((window.innerWidth)/2-cw/2)+"px,"+((window.innerHeight)/2-cw/2)+"px)");
+		
+		 $('.wholeCanWrap').click(function(){
+		      
+		  });
+	  });
+	  

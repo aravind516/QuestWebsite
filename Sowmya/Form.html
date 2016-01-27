@@ -1,6 +1,9 @@
 <html>
   <head>
     <script src='http://code.jquery.com/jquery-2.1.4.min.js'></script>
+	<link rel="stylesheet" href="../FrameWorks/animate.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/footer.css">
     <style>
     @font-face{
 	  src:url("Fonts/Squared Display.ttf");
@@ -40,14 +43,15 @@
 	      border-top: 1px solid rgba(0, 255, 255, 0.25);
 		  background-color: rgba(0, 255, 255, 0.08);
 		  color: rgba(255, 255, 255, 0.8);
-		 // -webkit-box-flex: 1;
-		  //webkit-flex: 1;
-			//  -ms-flex: 1;
-			//	  flex: 1;
-		 // padding: 20px;
+		  -webkit-box-flex: 1;
+		  webkit-flex: 1;
+	      -ms-flex: 1;
+		   flex: 1;
+		   //padding: 20px;
 		  position: relative;
 		  width:500px;
 		  margin-left:30%;
+		  margin-top:10%;
 	   }
 	   
 	 .form:before,.form:after{
@@ -142,20 +146,6 @@
 	  opacity: 1;
 	}
 	
-	.options{
-	  color: rgba(255, 255, 255, 0.8);
-	  list-style-type:none;
-	  display:inline-block;
-	}
-	 .options li{
-	  cursor:hand;
-	  margin:5px;
-	 }
-	 
-	.options li:hover{
-	    color: rgba(255, 255, 255);
-		text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
-	}
 	</style>
 	
 	<script>
@@ -186,10 +176,16 @@
   </head>
   
   <body>
-   <ul class="options">
-     <li>register</li>
-	 <li>login</li>
-   </ul>
+  
+  <header>
+  <a href="" class="title">QUEST 2016 <span class="date">13th and 14th March </span> </a> 
+  <ul class="account">
+    <li> <a href="Form.html"> login </a> </li>
+	<li> <a href="Form.html"> register </a> </li>
+  </ul>
+</header>
+
+  
   <div class="container">
     <form class="form login">
 		<h1 class="text-center">Login</h1>
@@ -209,6 +205,14 @@
 		  <div class="input-clip"></div>	
      </form>	
   </div>
+  
+  
+   <ul class="socialIcons">
+    <li> <a href=""> <p><img src="png\facebook.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\google.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\youtube.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\twitter.png">  </p></a> </li>
+  </ul>
   
   </body>
 

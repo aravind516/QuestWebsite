@@ -1,0 +1,25 @@
+
+			.socialIcons{
+			   clear:both;
+			   position:fixed;
+			   bottom:0;
+			   margin-bottom:0%;
+			   margin-left:41%;
+			  }
+			  
+			  .socialIcons li{
+				float:left;
+			    margin:5px 15px 5px 15px;
+			   }
+			   .socialIcons img{
+				 background-color:rgba(0, 255, 255, 0.5);
+			   }
+			   
+			   .socialIcons li:hover img{
+				 background-color:rgba(0, 255, 255,1);
+				 box-shadow:0px 0px 5px rgba(0, 255, 255,1);
+			   }
+			   
+			   .socialIcons li:hover a{
+				 text-shadow:0px 0px 5px rgba(255, 255, 255,1);
+			   }
