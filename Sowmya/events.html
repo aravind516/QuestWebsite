@@ -84,9 +84,11 @@
 		
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-	</script>
-	<script>
 		var endAnimation = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+ 		$('div.up-incoming').one(endAnimation,function() {
+ 				$(this).removeClass('animated fadeInDown').addClass('animated flash')
+ 			}
+ 		);
  		$('div.right-incoming').one(endAnimation,function() {
 	 			$(this).removeClass('animated fadeInRight')
 			}
@@ -118,11 +120,10 @@
 	 			$(this).removeClass('animated fadeInLeft')
 			}
 		);
-		$(document).ready(function(){
-			$("h3 class="color"").hover(function(){
-      			$("h3 class="color"").toggleClass("color");  //Toggle the active class to the area is hovered
-  			});
-		});					
+		$('div.up-incoming').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',function(){
+ 				$(this).removeClass('animated fadeInDown').delay(1500).addClass('animated rubberBand');
+  				}
+  			);						
 	</script>
 </body>
 </html>

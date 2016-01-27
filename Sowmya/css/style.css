@@ -1,6 +1,5 @@
 div.up-incoming {
 	animation-delay: 0.5s;
-	animation-duration: 0.5s;
 }
 div.left-incoming-1 {
 	animation-delay: 0.5s;
@@ -27,20 +26,11 @@ h1 {
 p {
 	text-align: justify;
 }
-.text-center {
-	text-align: center;
-}
 body {
     background-color: black;
 	background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .09) 25%, rgba(255, 255, 255, .09) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .09) 75%, rgba(255, 255, 255, .09) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .09) 25%, rgba(255, 255, 255, .09) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .09) 75%, rgba(255, 255, 255, .09) 76%, transparent 77%, transparent);
 	height: 100%;
 	background-size:50px 50px;
-}
-.button {
-	text-align: center;
-}
-.register {
-	position: absolute;
 }
 .color {
 	color: rgb(0,255,255);
