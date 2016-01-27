@@ -1,0 +1,152 @@
+<html>
+	<head> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="../FrameWorks/animate.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/homepage-menu.css">
+	<link rel="stylesheet" href="css/canvas.css">
+	<link rel="stylesheet" href="css/footer.css">
+	
+	<style>
+			a{
+			 text-decoration:none;
+			 color:black;
+			}
+			
+		   @media only screen and (max-width: 768px) { 
+			 .account  { margin-top:20px; } 
+			 .menu{ top:20%; }
+		  } 
+		
+		   @media only screen and (max-width: 620px) { 
+		      .wholeCanWrap{ display:none; }
+			   .menu{ top:20%; }
+		  }
+		  
+		  @media only screen and (max-width: 320px) { 
+		      .wholeCanWrap{ display:none; }
+			   .menu{ top:40%; }
+		  }
+		  
+		  .socialIcons li,.menu li{
+		    display:none;
+		  }
+		 .glow1{
+		   background-color:rgba(0, 255, 255,1);
+	       box-shadow:0px 0px 5px rgba(0, 255, 255,1);
+		 }
+	      .glow2{
+		    text-shadow:0px 0px 5px rgba(255, 255, 255,1);
+		  }
+	</style>
+	
+	<script>
+	  $(function(){
+	     $('.wholeCanWrap').addClass('animated zoomIn');
+	     $('.menu li').delay(1000).queue(function(){ 
+		       $(this).show(); 
+			   $('.leftMenu li').addClass("animated slideInLeft"); $(this).dequeue(); 
+			   $('.rightMenu li').addClass("animated slideInRight"); $(this).dequeue(); 
+		});
+	     $('.socialIcons li').delay(2000).queue(function(){ 
+		       $(this).show(); 
+			   $('.socialIcons li img').addClass("glow1"); $(this).dequeue(); 
+			   $('.socialIcons li a').addClass("glow2"); $(this).dequeue(); 
+			   $(this).addClass("animated flash"); $(this).dequeue(); 
+			   $(this).delay(2500).queue(function(){
+			      $('.socialIcons li img').removeClass('glow1');
+			      $('.socialIcons li a').removeClass('glow2');
+			   });
+		});
+	  });
+	
+	</script>
+	
+	</head>
+<body>
+
+<header>
+  <a href="" class="title">QUEST 2016 <span class="date">13th and 14th March </span> </a> 
+  <ul class="account">
+    <li> <a href="Form.html"> login </a> </li>
+	<li> <a href="Form.html"> register </a> </li>
+  </ul>
+</header>
+
+
+ <div class="wholeCanWrap">
+   <ul class="canvas-wrap">
+	  <li id="c1"><canvas id="canvas"></canvas></li>
+	  <li id="c2"><div class="canvasCenter"> <p>Quest<br>2016 </p></div></li>
+		<script src="script/canvas.js"></script>
+	</ul>
+  </div>
+    <ul class="menu leftMenu">
+			  <li>
+			   <div class="entity" >
+			     <div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					<div class="text" style="margin-top:60px; margin-left:30px;"> <a href="events.html">Events </a></div>
+				</div>  
+			   </div>
+			  </li>
+			  
+			  <li>	  
+			   <div class="entity">
+				<div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					 <div class="text" style="margin-top:60px; margin-left:20px; font-size:24px;"> <a href="Workshops/workshop.html"> Workshops </a></div>
+				</div>
+			   </div>
+			  </li>
+			  
+			  <li>	  
+			   <div class="entity">
+				<div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					 <div class="text" style="margin-top:50px; margin-left:40px; font-size:30px;"> <a href=""><p>About</p><p> Us</p> </a></div>
+				</div>
+			   </div>
+			 </li>
+		</ul>   
+		
+		 <ul class="menu rightMenu">
+			  <li>
+			   <div class="entity" >
+			     <div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					<div class="text" style="margin-top:60px; margin-left:30px;"><a href="Archives/archives.html">Gallery</a></div>
+				</div>
+			   </div>
+			  </li>
+			  
+			  <li>	  
+			   <div class="entity">
+				<div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					 <div class="text" style="margin-top:60px; margin-left:25px; font-size:24px;"><a href="team.html">Our Team</a></div>
+				</div>
+		       </div>
+			  </li>
+			  
+			  <li>	  
+			   <div class="entity">
+				<div class="semi_arc e4">
+					<div class="semi_arc_2 e4_1"></div>
+					 <div class="text" style="margin-top:60px; margin-left:20px; font-size:23px;"><a href="">Hospitality </a> </div>
+				</div>
+		      </div>
+			 </li>
+		</ul>   
+		
+  <ul class="socialIcons">
+    <li> <a href=""> <p><img src="png\facebook.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\google.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\youtube.png"> </p> </a> </li>
+	<li> <a href=""> <p><img src="png\twitter.png">  </p></a> </li>
+  </ul>
+ 
+ 
+</body>
+</html>
+	

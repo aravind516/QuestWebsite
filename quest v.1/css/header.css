@@ -1,0 +1,73 @@
+          * {  margin: 0; 
+			   padding: 0;
+			}
+			
+			body{
+			  background-color:black;
+              background-image:  linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .07) 25%, rgba(255, 255, 255, .07) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .07) 75%, rgba(255, 255, 255, .07) 76%, transparent 77%, transparent);
+	          background-size:50px 50px;
+			  margin:0 auto;
+			  margin:0px 0px 0px 0px;
+			  padding:0px 0px 0px 0px; 
+			  color:rgba(0, 255, 255,1);
+			  font-family:squared;
+			
+			}
+			
+			 @font-face{
+				  src:url("../Fonts/Squared Display.ttf");
+				  font-family:squared;
+				} 
+				
+			ul{
+			 list-style-type:none;
+			}
+			a{
+			 text-decoration:none;
+			 color:black;
+			}
+			
+		  
+		  
+		  header{
+			  position:fixed;
+			  background-color:rgba(0, 255, 255,1);
+			  color:black;
+			  font-size:40px;
+			  width:100%;
+			  height:auto;
+			  border-bottom:1px solid rgba(0, 255, 255,0.8);
+			  font-family:squared;
+			  font-weight:bold;
+			  z-index:100;
+			  top:0px;
+			}
+			
+			header .title{
+			  margin-left:2px;
+			  color:black;
+			}
+
+            .account{
+			 float:right;
+			 font-size:40px;
+			}
+
+            .account li{
+			  float:left;
+			  margin-right:40px;
+			}			
+			
+            .account li a{
+			  color:black;
+			}			
+			 
+			.account li:hover a{
+			  color:white;
+			}
+			
+			.date{
+			 font-size:25px;
+			 margin:0px 0px 0px 4px;
+			}
+			

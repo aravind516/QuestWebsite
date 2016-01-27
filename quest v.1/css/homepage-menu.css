@@ -1,0 +1,116 @@
+        .menu{
+			  position:relative;
+			  margin-top:2%;		
+              width:200px;	
+              padding:3% 3% 3% 3%;			  
+			}
+			
+			.rightMenu{
+			   float:right;
+			   margin-right:1%;
+			}
+			
+			.leftMenu{
+			  float:left;
+			  margin-left:1%;
+			}
+			
+			.menu a{
+			   color:rgba(0, 255, 255,1);
+			}
+			
+			.menu li{
+			   margin-left:5%;
+			   margin-top:10%;
+			   text-align:center;
+			}
+			
+			.entity{
+			  position:relative;
+			  transition: all 0.3s;
+			  cursor:hand;
+			}
+			
+			.semi_arc {
+			  position:relative;
+			  width: 150px;
+			  height: 150px;
+			  border: 7px solid rgb(0, 255, 255);
+			  background:transparent;
+			  border-radius:50%;
+			  transform: rotateZ(0deg);
+			  transition: box-shadow 3s ease;
+			  text-align: center;
+			  color:white;
+			}
+
+			.entity:hover .semi_arc{
+			  box-shadow: 0px 0px 30px rgb(0, 255, 255);
+			  transition: 0.3s;
+			}
+			
+			.e4 {
+			  width: 150px;
+			  height:150px;
+			}
+			
+			.semi_arc_2 {
+			  content: "";
+			  position: absolute;
+			  width: 94%;
+			  height: 94%;
+			  left: 3%;
+			  top: 3%;
+			  border: 3px solid rgb(0, 255, 255);
+			  border-radius:50%;
+			  box-sizing:border-box;
+			  animation: rotate 4s linear infinite;
+			  text-align: center;
+			  line-height: 129px;
+			}
+			
+			.semi_arc_2:after {
+			  content: "";
+			  position: absolute;
+			  width: 94%;
+			  height: 94%;
+			  left: 3%;
+			  top: 3%;
+			  border: 5px solid rgba(0, 255, 255, 0.5);
+			  border-radius:50%;
+			  box-sizing:border-box;
+			  animation: rotate_anti 2s linear infinite;
+			  border-left: 5px solid transparent;
+			  border-right: 5px solid transparent;
+			}
+			
+			.e4_1 {
+			  border-color: rgba(0, 255, 255, 0.8);
+			  border-left: 5px solid transparent;
+			  border-right: 5px solid transparent;
+			}
+			
+			@keyframes rotate {
+			  0% { transform: rotateZ(0deg) }
+			100% { transform: rotateZ(360deg) }
+			}
+
+			@keyframes rotate_anti {
+			  0% { transform: rotateZ(360deg) }
+			100% { transform: rotateZ(0deg) }
+			}
+				
+			.text{
+			  position:absolute;
+			  color:rgb(0, 255, 255);
+			  font-size:30px;
+			  text-align:center;
+			  text-shadow:0px 0px 5px rgba(0, 255, 255, 0.8);
+			  transition:all 0.3s ease-in-out;
+			}
+			
+			.entity:hover .text a{
+			  color:rgba(255, 255, 255, 0.8);
+			  text-shadow:0px 0px 10px rgba(255, 255, 255, 0.8);
+			}
+			

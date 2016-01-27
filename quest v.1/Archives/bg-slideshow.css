@@ -1,0 +1,232 @@
+
+	.slideshow > div {
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		left: 0;
+		-webkit-animation: 16s infinite alternate ease-in-out;
+		animation: 16s infinite alternate ease-in-out;
+	}
+
+	.slideshow > div:nth-child(1) {
+		background-image: url("images/image-slider-1.jpg");
+		background-attachment: fixed;
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);
+		background-size: cover;
+		-webkit-animation-name: fade-1;
+		animation-name: fade-1;
+	}
+
+	@-webkit-keyframes fade-1 {
+		0% {
+			opacity: 1;
+		}
+		33.33333% {
+			opacity: 0;
+		}
+		66.66667% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes fade-1 {
+		0% {
+			opacity: 1;
+		}
+		33.33333% {
+			opacity: 0;
+		}
+		66.66667% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	
+	.slideshow > div:nth-child(2) {
+		background-image: url("images/image-slider-2.jpg");
+		background-attachment: fixed;
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);
+		background-size: cover;
+		-webkit-animation-name: fade-2;
+		animation-name: fade-2;
+	}
+
+	@-webkit-keyframes fade-2 {
+		0% {
+			opacity: 0;
+		}
+		33.33333% {
+			opacity: 1;
+		}
+		66.66667% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes fade-2 {
+		0% {
+			opacity: 0;
+		}
+		33.33333% {
+			opacity: 1;
+		}
+		66.66667% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	.slideshow > div:nth-child(3) {
+		background-image: url("images/image-slider-3.jpg");
+		background-attachment: fixed;
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);
+		background-size: cover;
+		-webkit-animation-name: fade-3;
+		animation-name: fade-3;
+	}
+
+	@-webkit-keyframes fade-3 {
+		0% {
+			opacity: 0;
+		}
+		33.33333% {
+			opacity: 0;
+		}
+		66.66667% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	@keyframes fade-3 {
+		0% {
+			opacity: 0;
+		}
+		33.33333% {
+			opacity: 0;
+		}
+		66.66667% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+
+	.slideshow > div:nth-child(4) {
+		background-image: url("images/image-slider-4.jpg");
+		background-attachment: fixed;
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);
+		background-size: cover;
+		-webkit-animation-name: fade-4;
+		animation-name: fade-4;
+	}
+
+	@-webkit-keyframes fade-4 {
+		0% {
+			opacity: 0;
+		}
+		33.33333% {
+			opacity: 0;
+		}
+		66.66667% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	@keyframes fade-4 {
+		0% {
+			opacity: 0;
+		}
+		33.33333% {
+			opacity: 0;
+		}
+		66.66667% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+
+/* SASS code for blurred background slideshow 
+
+
+$images: 'images/image-slider-1.jpg', 'images/image-slider-2.jpg', 'images/image-slider-3.jpg',
+'images/image-slider-4.jpg';
+
+$slideDuration: 4; // time in seconds to show each image
+
+/*** NO NEED TO EDIT BELOW!!! ***/ 
+/*$length: length($images);
+$step: 100 / ($length - 1);
+
+/*** Static Style ***//*
+.slideshow > div {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	animation: #{$slideDuration * $length}s  infinite alternate ease-in-out; 
+}
+
+@each $image in $images {
+	$i: index($images, $image);
+
+	.slideshow > div:nth-child(#{$i}) {
+		background-image: url($image);
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);
+		background-size: cover;
+		background-attachment: fixed;
+		animation-name: fade-#{$i};
+	}
+
+	$currentStep: 0;
+	@keyframes fade-#{$i} {
+		@while $currentStep <= 100 {
+			#{$currentStep}% {
+				opacity: if(($i - 1) * $step == $currentStep, 1, 0);
+			}
+			$currentStep: $currentStep + $step;
+		}
+	}
+}
+*/
