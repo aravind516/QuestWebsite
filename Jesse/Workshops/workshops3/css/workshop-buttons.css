@@ -1,3 +1,4 @@
+
 @import url("http://fonts.googleapis.com/css?family=Lobster");
 @font-face {
   font-family: 'ModernPictogramsNormal';
@@ -6,12 +7,11 @@
   font-weight: normal;
   font-style: normal;
 }
-/*
+
 .button-list {
 	height: 20px;
 	width: 40px;
 }
-*/
 
 a {
   text-align: center;
@@ -25,7 +25,6 @@ fieldset {
   min-height: 90px;
   line-height: 90px;
   position: relative;
-  float: left;
   margin-right: 20px;
   padding: 20px;
 }
@@ -83,7 +82,7 @@ a.glowBtn:after {
 
 /* -------------------
 	Hover States
--------------------- */
+-------------------- *//*
 a.glowBtn:hover, a.hover, input[type='radio'] + label:hover {
   color: #AEAEAE;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
@@ -100,7 +99,7 @@ a.glowBtn:hover:after, a.hover:after, input[type='radio'] + label:hover:after {
 
 /* -------------------
 	Active States
--------------------- */
+-------------------- *//*
 a.glowBtn:active, a.active, a.active:hover {
   color: #00ccff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0px 30px rgba(0, 255, 255, 0.7);
@@ -127,7 +126,7 @@ a.glowBtn:active:after, a.active:after, a.active:hover:after {
 
 /* -------------------
 	SuperBtn
--------------------- */
+-------------------- *//*
 a.superBtn {
   color: #0e0e0e;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -178,6 +177,7 @@ a.superBtn:after {
 /* -------------------
 	SuperBtn Hover
 -------------------- */
+/*
 a.superBtn:hover {
   color: #AEAEAE;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
@@ -203,7 +203,7 @@ a.superBtn:active {
   -webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
   box-shadow: 0 1px 0px rgba(255, 255, 255, 0.4), inset 0 3px 3px rgba(0, 0, 0, 0.7), inset 0 0 4px rgba(0, 0, 0, 0.9), 0 0 0 black;
 }
-
+*/
 
 /*
 
