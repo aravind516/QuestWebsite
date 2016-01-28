@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="workshop-style.css">
 	<link rel="stylesheet" type="text/css" href="workshop-buttons.css">
 	<script src="workshop-script.js"></script>
+	<script src="workshop-canvas.js"></script>
 
 	<style> 
 	
@@ -27,14 +28,32 @@
 
 		}
 
-		/****************  Content  *****************/
-
 		.title {
 			text-align: center;
 			font-size: 25px;
 			text-decoration: underline;
 		}
 
+		.by {
+			font-size: 20px;
+			color: #0ff;
+			vertical-align: middle;
+			text-align: center;
+			display: table-cell;
+		}
+
+		#myCanvas {
+			position: absolute;
+		}
+
+		.myCanvas {
+			display: table;
+			position: relative;
+		}
+
+		#abtjntuceh-by {
+			display: none;
+		}
 
 	</style>
 
@@ -67,26 +86,25 @@
 			</p></div>
 		</div>
 	</div>
-<!--
-	<div class="menu-items">
-	
-		<nav>
-			<ul>
-				<li><a href="#"class="button item1" onclick="toggle_visibility('abtquest');" title="About Quest"><span></span></a></li>
-				<li><a href="#"class="button item2" onclick="toggle_visibility('abtjntuceh');" title="About JNTU"><span></span></a></li>
-			</ul>
-		</nav>
+
+	<div class="button-list">
+		<fieldset>
+			<a href="#"class="superBtn button item1" onclick="toggle_visibility('ethical-hacking');" title="About Quest">Cyber Security</a>
+		</fieldset>
+
+		<fieldset>
+			<a href="#"class="superBtn button item2" onclick="toggle_visibility('abtjntuceh');" title="About JNTU">Augmented </a>
+		</fieldset>
 	</div>
--->
 
-<div class="button-list">
-			<fieldset>
-				<a href="#"class="superBtn button item1" onclick="toggle_visibility('ethical-hacking');" title="About Quest">Cyber Security</a>
-			</fieldset>
 
-			<fieldset>
-				<a href="#"class="superBtn button item2" onclick="toggle_visibility('abtjntuceh');" title="About JNTU">Augmented </a>
-			</fieldset>
-</div>	
+	<div class="myCanvas" style="position:absolute; top: 170px; left:1050px; width: 300; height:300;">
+        <canvas id='myCanvas' width='300' height='300'>
+              Your browser does not support HTML5 Canvas.
+        </canvas>
+        <div class="by by-text" id="ethical-hacking-by"><small>By</small><br>Mr. ABCDE FGHIJK<br><small>pqrst uvw xyz</small></div>
+        <div class="by by-text" id="abtjntuceh-by"><small>By</small><br>Mr. QWERTY POIL<br><small>zaxaus jsaijsn</small></div>
+	<script src="workshop-canvas.js"></script>
+    </div>
 </body>
 </html>
